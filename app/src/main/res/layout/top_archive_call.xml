@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:id="@+id/extra_view"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="top"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_call_dialog"
+        android:padding="@dimen/space15"
+        android:layout_width="wrap_content"
+        app:backgroundTint="?colorPrimary"
+        android:layout_marginStart="5dp"
+        app:tint="?colorTextHeader"
+        android:layout_height="wrap_content"
+        android:background="@drawable/border_for_floating_menu"
+        android:layout_gravity="top|end"
+        android:layout_marginTop="@dimen/space140"
+        android:layout_marginEnd="@dimen/space10"
+        android:elevation="5dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:src="@drawable/call_responses_svg"/>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

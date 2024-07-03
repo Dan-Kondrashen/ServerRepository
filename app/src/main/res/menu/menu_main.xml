@@ -1,0 +1,38 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="ru.kondrashen.attendanciescoutapp.Presentation.activitys.MainActivity">
+
+    <item
+        android:id="@+id/action_logout"
+        android:title="@string/action_logout"
+        android:icon="@drawable/logout_svg"
+        app:showAsAction="ifRoom|withText" />
+    <item android:title=""
+        app:showAsAction="always"
+        android:icon="@drawable/baseline_more_horiz_30">
+        <menu>
+            <item
+                android:id="@+id/action_settings"
+                android:orderInCategory="100"
+                android:title="@string/action_settings"
+                android:icon="@drawable/settings_svg"
+                app:showAsAction="ifRoom|withText" />
+            <item
+                android:id="@+id/action_go_to_account"
+                android:orderInCategory="100"
+                android:title="@string/action_personal_space"
+                android:icon="@drawable/user_svg"
+                app:showAsAction="ifRoom|withText" />
+            <item
+                android:id="@+id/action_go_to_filtration"
+                android:orderInCategory="100"
+                android:title="@string/filtration_documents_text"
+                android:icon="@drawable/filter_list_svg"
+                app:showAsAction="ifRoom|withText" />
+
+        </menu>
+    </item>
+
+
+</menu>

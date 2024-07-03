@@ -1,0 +1,401 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:transitionName="@string/animated_open_item"
+    android:padding="3dp">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border_for_main_viewed_item"
+            android:paddingBottom="20dp"
+            android:paddingRight="8dp"
+            android:paddingLeft="8dp">
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:text=""
+                android:scrollbars="vertical"
+
+                android:maxLines="4"
+                android:layout_marginTop="@dimen/space15"
+                android:layout_marginBottom="6dp"
+                android:layout_marginStart="@dimen/space15"
+                android:layout_marginEnd="@dimen/space20"
+                android:background="@drawable/border_for_document_preview"
+                android:paddingTop="@dimen/space8"
+                android:paddingBottom="@dimen/space8"
+                android:paddingRight="@dimen/space10"
+                android:paddingLeft="@dimen/space10"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+
+                android:id="@+id/date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/title">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center|start"
+                    android:text="@string/dateText"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:layout_constraintWidth_min="wrap" />
+
+                <TextView
+                    android:id="@+id/dateInfo"
+                    style="?android:listSeparatorTextViewStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="18sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+
+                android:id="@+id/company"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center|start"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/date">
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center|start"
+                    android:text="@string/company_name"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:layout_constraintWidth_min="wrap" />
+
+                <TextView
+                    android:id="@+id/companyInfo"
+                    android:padding="4dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="18sp" />
+
+            </LinearLayout>
+            <LinearLayout
+
+                android:id="@+id/fio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center|start"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/company">
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center|start"
+                    android:text="@string/userFIO"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:layout_constraintWidth_min="wrap" />
+
+                <TextView
+                    android:id="@+id/fioInfo"
+                    android:padding="4dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="18sp" />
+
+            </LinearLayout>
+
+            <com.google.android.flexbox.FlexboxLayout
+                android:id="@+id/salary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center|start"
+                app:alignContent="stretch"
+                app:alignItems="stretch"
+                app:flexWrap="wrap"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/fio">
+
+                <TextView
+                    android:id="@+id/salaryText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="@string/salary_start"
+                    android:textSize="16sp"
+                    android:textStyle="bold"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/space3">
+
+                    <TextView
+                        android:id="@+id/salaryF"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="4dp"
+                        android:text=""
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    >
+
+                    <TextView
+                        android:id="@+id/end"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+
+                        android:gravity="center|start"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/salaryS"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="4dp"
+                        android:text=""
+                        android:textSize="16sp" />
+                </LinearLayout>
+            </com.google.android.flexbox.FlexboxLayout>
+
+            <LinearLayout
+
+                android:id="@+id/experience"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center|start"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/salary">
+
+                <TextView
+                    android:id="@+id/experienceText"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:gravity="center|start"
+                    android:text="@string/positive_experience"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintWidth_min="wrap" />
+
+                <TextView
+                    android:id="@+id/experienceInfo"
+                    android:layout_width="0dp"
+                    android:layout_weight="2"
+                    android:layout_height="wrap_content"
+                    android:padding="4dp"
+                    tools:text="fffffff"
+                    android:textSize="16sp" />
+            </LinearLayout>
+            <LinearLayout
+
+                android:id="@+id/specialization"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center|start"
+                android:paddingTop="@dimen/space5"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/experience">
+
+                <TextView
+                    android:id="@+id/specializationText"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:gravity="center|start"
+                    android:text="@string/positive_specialization"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintWidth_min="wrap" />
+
+                <TextView
+                    android:id="@+id/specializationInfo"
+                    android:layout_width="0dp"
+                    android:layout_weight="2"
+                    android:layout_height="wrap_content"
+                    android:padding="4dp"
+                    tools:text="fffffff"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/extraText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="@dimen/space3"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/specialization"
+                android:text="@string/document_extra_info_hint"
+                android:textSize="@dimen/h4"
+                android:textStyle="bold"/>
+            <TextView
+                android:id="@+id/extraInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="@dimen/space30"
+                android:layout_marginStart="@dimen/space15"
+                android:layout_marginEnd="@dimen/space15"
+                android:paddingTop="@dimen/space5"
+                android:paddingLeft="@dimen/space8"
+                android:paddingRight="@dimen/space8"
+                android:paddingBottom="@dimen/space5"
+                android:gravity="center_vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/extraText"
+                android:background="@drawable/border_for_document_maininfo"
+                android:textSize="16sp"/>
+            <TextView
+                android:id="@+id/contactText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="@dimen/space3"
+                android:text="@string/document_contact_info_label"
+                android:textSize="@dimen/h4"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/extraInfo"/>
+            <TextView
+                android:id="@+id/contactInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="@dimen/space30"
+                android:layout_marginStart="@dimen/space15"
+                android:layout_marginEnd="@dimen/space15"
+                android:paddingTop="@dimen/space5"
+                android:paddingLeft="@dimen/space8"
+                android:paddingRight="@dimen/space8"
+                android:paddingBottom="@dimen/space5"
+                android:gravity="center_vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/contactText"
+                android:background="@drawable/border_for_document_maininfo"
+                android:textSize="16sp"/>
+            <TextView
+                android:id="@+id/knowledgeText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/contactInfo"
+                android:text="@string/important_knowledge"
+                android:visibility="gone"
+                android:textSize="16sp"
+                android:textStyle="bold"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/knowledgeRecycle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:visibility="gone"
+                android:background="@drawable/border_for_document_maininfo"
+                android:padding="8dp"
+                android:clipToPadding="false"
+                app:layout_constraintHeight_max="@dimen/space320"
+                app:layout_constraintTop_toBottomOf="@+id/knowledgeText"
+                android:maxHeight="100dp" />
+            <TextView
+                android:id="@+id/specText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:visibility="gone"
+                app:layout_constraintTop_toBottomOf="@+id/knowledgeRecycle"
+                android:text="@string/positive_specialization"
+                android:textSize="16sp"
+                android:textStyle="bold"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/specializationRecycle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintHeight_max="@dimen/space320"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/specText"
+                android:background="@drawable/border_for_document_maininfo"
+                android:padding="8dp"
+                android:visibility="gone"
+                android:maxHeight="100dp" />
+            <TextView
+                android:id="@+id/expText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/specializationRecycle"
+                android:text="@string/experienceText"
+                android:visibility="gone"
+                android:textSize="16sp"
+                android:textStyle="bold"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/experienceRecycle"
+                android:layout_width="match_parent"
+                android:layout_marginTop="@dimen/space5"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/expText"
+                app:layout_constraintHeight_max="@dimen/space320"
+                android:background="@drawable/border_for_document_maininfo"
+                android:padding="8dp"
+                android:visibility="gone"
+                tools:listitem="@layout/list_item_chat_intro"
+                android:maxHeight="150dp" />
+
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+    <include
+        android:id="@+id/top_archive_cal"
+        layout="@layout/top_archive_call"
+        android:elevation="2dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

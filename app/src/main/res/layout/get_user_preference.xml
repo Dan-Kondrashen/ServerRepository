@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/space5"
+        android:background="@drawable/border_for_extra_top_parametrs">
+        <LinearLayout
+            android:id="@+id/users_pref_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:orientation="vertical">
+
+<!--            android:visibility="gone"-->
+            <LinearLayout
+                android:id="@+id/usersPrefBlock"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/usersPref"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="top"
+                    android:layout_marginTop="@dimen/space10"
+                    android:layout_marginStart="@dimen/space10"
+                    android:layout_marginEnd="@dimen/space10"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto_slab_variable_font_wght"
+                        android:paddingBottom="@dimen/space5"
+                        android:paddingStart="@dimen/space5"
+                        android:paddingEnd="@dimen/space5"
+                        android:text="@string/user_pref_info"
+                        android:textSize="@dimen/h3"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:id="@+id/skillGroupSelector"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <TextView
+                            android:textStyle="bold"
+                            android:padding="@dimen/space5"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/chose_users_type"/>
+                        <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+                            android:id="@+id/userTypeSelector"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/space5"
+                            android:padding="@dimen/space5"
+                            android:layout_marginBottom="@dimen/space5"
+                            android:background="@drawable/selector_dropdown" />
+                    </LinearLayout>
+                    <com.google.android.material.switchmaterial.SwitchMaterial
+                        android:id="@+id/addPref"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAllCaps="false"
+                        android:text="@string/add_extra_user_pref"/>
+
+
+<!--                    android:visibility="gone"-->
+                    <LinearLayout
+                        android:id="@+id/extraPref"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="top"
+                        android:visibility="gone"
+                        android:orientation="vertical"
+                        android:layout_marginBottom="@dimen/space5">
+                        <CheckBox
+                            android:id="@+id/userStatusQuestion"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:theme="@style/custom_checkbox"
+                            android:textColor="?colorPrimaryUltraDark"
+                            android:layout_marginBottom="@dimen/space5"
+                            android:padding="@dimen/space5"
+                            android:text="@string/chose_user_pref" />
+
+                        <LinearLayout
+                            android:id="@+id/userStatusView"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:visibility="gone"
+                            android:orientation="vertical">
+                            <TextView
+                                android:padding="@dimen/space5"
+                                android:textStyle="bold"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/chose_user_status"/>
+                            <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+                                android:id="@+id/userStatusSelector"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/selector_dropdown"
+                                android:paddingStart="@dimen/space5"
+                                android:paddingTop="@dimen/space5"
+                                android:paddingEnd="27dp"
+                                android:paddingBottom="@dimen/space5" />
+                        </LinearLayout>
+                        <CheckBox
+                            android:id="@+id/userNumQuestion"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:theme="@style/custom_checkbox"
+                            android:textColor="?colorPrimaryUltraDark"
+                            android:layout_marginBottom="@dimen/space5"
+                            android:padding="@dimen/space5"
+                            android:text="@string/chose_user_num" />
+                        <LinearLayout
+                            android:id="@+id/userNumberView"
+                            android:layout_width="match_parent"
+                            android:visibility="gone"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/space3"
+                            android:orientation="vertical">
+                            <!--                            android:inputType="numberPassword"-->
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/numView"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textColorHint="?colorPrimaryUltraDark"
+                                app:hintTextAppearance="@style/hintForCustomEditTextStyle"
+                                app:layout_constraintBottom_toTopOf="@+id/password_view"
+                                style="@style/mainCustomTextInputLayoutStyle"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHorizontal_bias="0.496"
+                                app:layout_constraintStart_toStartOf="parent"
+                                android:hint="@string/input_start_number">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/etNumUsers"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    android:layout_marginBottom="5dp"
+                                    android:drawableStart="@drawable/number_svg"
+                                    android:drawableTint="?colorPrimaryUltraDark"
+                                    android:inputType="numberDecimal"
+                                    android:padding="5dp"
+                                    android:textSize="18sp" />
+                            </com.google.android.material.textfield.TextInputLayout>
+                        </LinearLayout>
+                        <CheckBox
+                            android:id="@+id/userInfoQuestion"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:theme="@style/custom_checkbox"
+                            android:textColor="?colorPrimaryUltraDark"
+                            android:layout_marginBottom="@dimen/space5"
+                            android:padding="@dimen/space5"
+                            android:text="@string/chose_user_info_pref" />
+
+                        <LinearLayout
+                            android:id="@+id/userInfoViewBlock"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="bottom"
+                            android:visibility="gone"
+                            android:orientation="vertical">
+                            <LinearLayout
+                                android:id="@+id/userInfoTypeView"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+                                <TextView
+                                    android:padding="@dimen/space5"
+                                    android:textStyle="bold"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/chose_user_info"/>
+                                <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+                                    android:id="@+id/userInfoTypeSelector"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/selector_dropdown"
+                                    android:paddingStart="@dimen/space5"
+                                    android:paddingTop="@dimen/space5"
+                                    android:paddingEnd="27dp"
+                                    android:paddingBottom="@dimen/space5" />
+                            </LinearLayout>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/userInfoView"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textColorHint="?colorPrimaryUltraDark"
+                                app:hintTextAppearance="@style/hintForCustomEditTextStyle"
+                                app:layout_constraintBottom_toTopOf="@+id/password_view"
+                                style="@style/mainCustomTextInputLayoutStyle"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHorizontal_bias="0.496"
+                                app:layout_constraintStart_toStartOf="parent"
+                                android:hint="@string/input_user_info">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/etUserInfo"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    android:drawableTint="?colorPrimaryUltraDark"
+                                    android:padding="5dp"
+                                    android:textSize="18sp" />
+                            </com.google.android.material.textfield.TextInputLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+                <Button
+                    android:id="@+id/callUsers"
+                    style="@style/main_button_style"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/space5"
+                    android:layout_marginStart="@dimen/space10"
+                    android:layout_marginEnd="@dimen/space10"
+                    android:layout_marginBottom="@dimen/space5"
+                    android:text="@string/get_users" />
+            </LinearLayout>
+            <Button
+                android:id="@+id/call_users_preference"
+                style="@style/list_button_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space3"
+                android:layout_marginStart="@dimen/space10"
+                android:layout_marginEnd="@dimen/space10"
+                android:layout_marginBottom="@dimen/space3"
+                android:text="@string/show_parameters" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/space45"
+                android:visibility="gone"/>
+
+        </LinearLayout>
+    </ScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

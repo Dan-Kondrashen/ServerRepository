@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/list_item_view"
+    android:scaleType="fitCenter"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/space5"
+    android:layout_marginBottom="@dimen/space5"
+    android:layout_marginRight="@dimen/space15"
+    android:layout_marginLeft="@dimen/space15"
+    android:elevation="8dp"
+    android:translationZ="1000dp"
+    android:transitionName="@string/unanimated_item"
+    android:background="@drawable/border_for_main_viewed_item"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <LinearLayout
+        android:id="@+id/list_item_document_main_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space10"
+        android:layout_marginBottom="@dimen/space15"
+        android:layout_marginEnd="@dimen/space20"
+        android:gravity="center"
+        android:layout_marginStart="@dimen/space15">
+        <TextView
+            android:id="@+id/list_item_document_title_text_view"
+            android:layout_width="0dp"
+            android:layout_weight="3"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border_for_document_preview"
+            android:textStyle="bold"
+            android:padding="@dimen/space5"
+            android:gravity="center"
+            android:textSize="18sp"
+            android:ellipsize="end"
+            android:minLines="2"
+            android:maxLines="3"
+            tools:text="Название документа" />
+        <ImageButton
+            android:id="@+id/save_btn"
+            android:layout_height="@dimen/space55"
+            android:layout_width="@dimen/space55"
+            android:layout_marginStart="@dimen/space10"
+            android:background="@drawable/download_file_svg"
+            android:contentDescription="@string/delete" />
+    </LinearLayout>
+
+    <com.github.mikephil.charting.charts.PieChart
+        android:id="@+id/pie_chart_user_documents"
+        android:layout_width="match_parent"
+        android:layout_height="360dp"
+        android:layout_below="@id/list_item_document_main_view"
+        android:layout_marginStart="@dimen/space15"
+        android:layout_marginEnd="@dimen/space20"
+        />
+
+    <TextView
+        android:id="@+id/analysisResultText"
+        android:layout_below="@id/pie_chart_user_documents"
+        android:padding="@dimen/space3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/space15"
+        android:layout_marginEnd="@dimen/space20"/>
+    <TextView
+        android:id="@+id/analysisResultInfo"
+        android:layout_below="@id/analysisResultText"
+        android:padding="@dimen/space3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/space20"
+        android:layout_marginStart="@dimen/space15"
+        android:layout_marginEnd="@dimen/space20"/>
+
+</RelativeLayout>

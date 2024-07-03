@@ -1,0 +1,86 @@
+<RelativeLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ScrollView
+        android:id="@+id/scrollPage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginStart="@dimen/space5"
+            android:layout_marginEnd="@dimen/space5">
+
+<!--            <Button-->
+<!--                android:id="@+id/button_user_skills"-->
+<!--                android:layout_width="match_parent"-->
+<!--                style="@style/list_button_style"-->
+<!--                android:textColor="?colorPrimaryUltraDark"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginTop="5dp"-->
+<!--                android:textStyle="bold"-->
+<!--                android:paddingStart="@dimen/space55"-->
+<!--                android:paddingEnd="@dimen/space55"-->
+<!--                android:text="@string/userSkillAnalysis"-->
+<!--                android:gravity="center"-->
+
+<!--                />-->
+<!--            <com.github.mikephil.charting.charts.LineChart-->
+<!--                android:id="@+id/line_chart_user_skills"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:visibility="gone"-->
+<!--                android:layout_marginStart="5dp"-->
+<!--                android:layout_marginTop="5dp"-->
+<!--                android:layout_marginEnd="5dp"-->
+<!--                android:layout_marginBottom="5dp"/>-->
+            <Button
+                android:id="@+id/button_user_docs_analysis"
+                android:layout_width="match_parent"
+                style="@style/list_button_style"
+                android:textColor="?colorPrimaryUltraDark"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:paddingStart="@dimen/space55"
+                android:paddingEnd="@dimen/space55"
+                android:textStyle="bold"
+                android:text="@string/userDocAnalysis"
+                android:gravity="center"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_marginTop="5dp"
+                android:visibility="gone"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                android:orientation="vertical"
+                android:id="@+id/document_analysis"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+            <ProgressBar
+                android:id="@+id/progressGetDocs"
+                android:visibility="gone"
+                android:layout_width="@dimen/space45"
+                android:layout_marginTop="@dimen/space10"
+                android:layout_gravity="center"
+                android:layout_height="@dimen/space45"/>
+            <TextView
+                android:id="@+id/document_problems"
+                android:layout_marginTop="5dp"
+                android:padding="@dimen/space5"
+                style="@style/helpTextOnBack"
+                android:text="@string/user_documents_not_found"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                android:orientation="vertical"
+                android:layout_margin="@dimen/space8"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</RelativeLayout>
+
+

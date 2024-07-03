@@ -1,0 +1,143 @@
+<RelativeLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <include
+        android:id="@+id/functional_analysis_block"
+        layout="@layout/functional_analysis_block"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/space5"
+        android:layout_marginTop="@dimen/space5"
+        android:layout_marginEnd="@dimen/space5"
+        android:layout_marginBottom="@dimen/space5"
+        android:elevation="2dp" />
+    <ScrollView
+        android:id="@+id/scrollPage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/functional_analysis_block">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginStart="@dimen/space5"
+            android:layout_marginEnd="@dimen/space5">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+                <Button
+                    android:id="@+id/button_popularity"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:paddingEnd="@dimen/space55"
+                    style="@style/list_button_style"
+                    android:textColor="?colorPrimaryUltraDark"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/space5"
+                    android:layout_marginBottom="@dimen/space5"
+                    android:textStyle="bold"
+                    android:text="@string/skillPopularityYear"
+                    android:gravity="center" />
+                <ImageView
+                    android:id="@+id/save_popularity_graph_btn"
+                    android:layout_marginTop="@dimen/space5"
+                    android:layout_marginBottom="@dimen/space5"
+                    android:layout_marginStart="@dimen/space5"
+                    android:padding="@dimen/space5"
+                    android:visibility="gone"
+                    android:layout_width="@dimen/space55"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/download_svg"
+                    android:background="@drawable/add_btn_background"
+                    android:contentDescription="@string/add_document" />
+            </LinearLayout>
+            <com.github.mikephil.charting.charts.LineChart
+                android:id="@+id/line_chart_skill_popularity"
+                android:layout_width="match_parent"
+                android:layout_height="360dp"
+                android:visibility="gone"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="5dp">
+
+            </com.github.mikephil.charting.charts.LineChart>
+            <ProgressBar
+                android:id="@+id/progressPopularity"
+                android:layout_width="@dimen/space45"
+                android:layout_height="@dimen/space45"
+                android:layout_gravity="center"
+                android:visibility="gone"
+                android:layout_marginTop="@dimen/space8"
+                android:layout_marginBottom="@dimen/space8"/>
+
+            <TextView
+                android:id="@+id/lineChartNoData"
+                android:layout_width="match_parent"
+                android:visibility="gone"
+                android:layout_height="wrap_content"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+                <Button
+                    android:id="@+id/button_importance"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:paddingEnd="@dimen/space55"
+                    style="@style/list_button_style"
+                    android:textColor="?colorPrimaryUltraDark"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:textStyle="bold"
+                    android:text="@string/skillAnalysis"
+                    android:gravity="center" />
+                <ImageView
+                    android:id="@+id/save_importance_graph_btn"
+                    android:layout_marginTop="@dimen/space5"
+                    android:layout_marginBottom="@dimen/space5"
+                    android:layout_marginStart="@dimen/space5"
+                    android:padding="@dimen/space5"
+                    android:visibility="gone"
+                    android:layout_width="@dimen/space55"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/download_svg"
+                    android:background="@drawable/add_btn_background"
+                    android:contentDescription="@string/add_document" />
+            </LinearLayout>
+            <com.github.mikephil.charting.charts.HorizontalBarChart
+                android:id="@+id/bar_chart_skill_popularity"
+                android:layout_width="match_parent"
+                android:layout_height="360dp"
+                android:visibility="gone"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="5dp">
+
+            </com.github.mikephil.charting.charts.HorizontalBarChart>
+            <ProgressBar
+                android:id="@+id/progressImportance"
+                android:layout_width="@dimen/space45"
+                android:layout_height="@dimen/space45"
+                android:layout_gravity="center"
+                android:visibility="gone"
+                android:layout_marginTop="@dimen/space8"
+                android:layout_marginBottom="@dimen/space8"/>
+            <TextView
+                android:id="@+id/barChartNoData"
+                android:layout_width="match_parent"
+                android:visibility="gone"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>
+
+

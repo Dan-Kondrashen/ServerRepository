@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--suppress NavigationFile -->
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_host_fragment_content_main"
+    app:startDestination="@id/mainFragmentView">
+
+    <fragment
+        android:id="@+id/chatChoseFragment"
+        android:name="ru.kondrashen.diplomappv20.presentation.fragments.ChatChoseFragment"
+        android:label="ChatChose"
+        tools:layout="@layout/chose_chat_fragment">
+        <argument
+            android:name="userId"
+            app:argType="integer" />
+
+
+        <action
+            android:id="@+id/action_chatFragment_to_personalSpaceFragment"
+            app:destination="@id/personalSpaceFragment" />
+        <action
+            android:id="@+id/action_chatFragment_to_mainFragmentEmployee"
+            app:destination="@id/mainFragmentView" />
+        <action
+            android:id="@+id/action_chatChoseFragment_to_chatFragment"
+            app:destination="@id/chatFragment" />
+        <action
+            android:id="@+id/action_chatChoseFragment_to_personalSpaceFragment"
+            app:destination="@id/personalSpaceFragment" />
+        <action
+            android:id="@+id/action_chatChoseFragment_to_mainFragmentEmployee"
+            app:destination="@id/mainFragmentView" />
+        <action
+            android:id="@+id/action_chatChoseFragment_to_analysisPrefFragment"
+            app:destination="@id/analysisPrefFragment" />
+        <action
+            android:id="@+id/action_chatChoseFragment_to_preferenceFragment"
+            app:destination="@id/preferenceFragment" />
+
+
+    </fragment>
+    <fragment
+        android:id="@+id/personalSpaceFragment"
+        android:name="ru.kondrashen.diplomappv20.presentation.fragments.UserPersonalSpaceFragment"
+        android:label="Personal Space"
+        tools:layout="@layout/user_personal_space_fragment" >
+        <argument android:name="userId"
+            app:argType="integer"/>
+        <action
+            android:id="@+id/action_personalSpaceFragment_to_mainFragmentEmployee"
+            app:destination="@id/mainFragmentView" />
+        <action
+            android:id="@+id/action_personalSpaceFragment_to_pagerFragment"
+            app:destination="@id/pagerFragmentEmployee" />
+        <action
+            android:id="@+id/action_personalSpaceFragment_to_editDocumentFragment"
+            app:destination="@id/editDocumentFragment" />
+        <action
+            android:id="@+id/action_personalSpaceFragment_to_chatFragment"
+            app:destination="@id/chatFragment" />
+        <action
+            android:id="@+id/action_personalSpaceFragment_to_analysisPrefFragment"
+            app:destination="@id/analysisPrefFragment" />
+        <action
+            android:id="@+id/action_personalSpaceFragment_to_chatChoseFragment"
+            app:destination="@id/chatChoseFragment" />
+        <action
+            android:id="@+id/action_personalSpaceFragment_to_preferenceFragment"
+            app:destination="@id/preferenceFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/filtrationFragment"
+        android:name="ru.kondrashen.diplomappv20.presentation.fragments.FilteredDocumentsFragment"
+        android:label="@string/filtration_documents_text"
+        tools:layout="@layout/filterable_documents_page">
+        <argument
+            android:name="userId"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_filtrationFragment_to_pagerFragmentEmployee"
+            app:destination="@id/pagerFragmentEmployee" />
+        <action
+            android:id="@+id/action_filtrationFragment_to_preferenceFragment"
+            app:destination="@id/preferenceFragment" />
+
+
+    </fragment>
+    <fragment
+        android:id="@+id/editDocumentFragment"
+        android:name="ru.kondrashen.diplomappv20.presentation.fragments.EditDocumentFragment"
+        android:label="@string/edit_document"
+        tools:layout="@layout/create_document_employee_fragment">
+        <argument
+            android:name="userId"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_editDocumentFragment_to_personalSpaceFragment"
+            app:destination="@id/personalSpaceFragment" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/analysisPrefFragment"
+        android:name="ru.kondrashen.diplomappv20.presentation.fragments.AnaliticFragment"
+        android:label="@string/edit_document"
+        tools:layout="@layout/extr_skills_actual_popularity_graf_fragment">
+        <argument
+            android:name="userId"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_analysisPrefFragment_to_personalSpaceFragment"
+            app:destination="@id/personalSpaceFragment" />
+        <action
+            android:id="@+id/action_analysisPrefFragment_to_mainFragmentEmployee"
+            app:destination="@id/mainFragmentView" />
+        <action
+            android:id="@+id/action_analysisPrefFragment_to_chatChoseFragment"
+            app:destination="@id/chatChoseFragment" />
+        <action
+            android:id="@+id/action_analysisPrefFragment_to_preferenceFragment"
+            app:destination="@id/preferenceFragment" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/mainFragmentView"
+        android:name="ru.kondrashen.diplomappv20.presentation.fragments.MainFragmentEmployee"
+        android:label="EmployeeMain"
+        tools:layout="@layout/employee_main_list_page">
+        <argument android:name="userId"
+            app:argType="integer"/>
+        <argument android:name="userType"
+            app:argType="string"/>
+        <action
+            android:id="@+id/action_mainFragment_to_pagerFragment"
+            app:destination="@id/pagerFragmentEmployee" />
+        <action
+            android:id="@+id/action_mainFragment_to_personalSpaceFragment"
+            app:destination="@id/personalSpaceFragment"
+            />
+        <action
+            android:id="@+id/action_mainFragmentEmployee_to_chatFragment"
+            app:destination="@id/chatFragment" />
+        <action
+            android:id="@+id/action_mainFragmentEmployee_to_analysisPrefFragment"
+            app:destination="@id/analysisPrefFragment" />
+        <action
+            android:id="@+id/action_mainFragmentEmployee_to_chatChoseFragment"
+            app:destination="@id/chatChoseFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_preferenceFragment"
+            app:destination="@id/preferenceFragment" />
+        <action
+            android:id="@+id/action_mainFragmentView_to_filtrationFragment"
+            app:destination="@id/filtrationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/pagerFragmentEmployee"
+        android:name="ru.kondrashen.diplomappv20.presentation.fragments.DocumentPagerFragment"
+        android:label="EmployeePager"
+        tools:layout="@layout/documents_pager_fragment">
+        <argument android:name="userId"
+            app:argType="integer"/>
+        <action
+            android:id="@+id/action_pagerFragmentEmployee_to_personalSpaceFragment"
+            app:destination="@id/personalSpaceFragment" />
+
+        <action
+            android:id="@+id/action_pagerFragmentEmployee_to_chatFragment"
+            app:destination="@id/chatFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/preferenceFragment"
+        android:name="ru.kondrashen.diplomappv20.presentation.fragments.AppPreferenceFragment"
+        android:label="@string/action_settings"
+        tools:layout="@layout/preference_fragment">
+
+    </fragment>
+    <fragment
+        android:id="@+id/chatFragment"
+        android:name="ru.kondrashen.diplomappv20.presentation.fragments.ChatFragment"
+        android:label="Chat"
+        tools:layout="@layout/document_chat_fragment">
+        <argument
+            android:name="userId"
+            app:argType="integer" />
+        <argument
+            android:name="respId"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_chatFragment_to_personalSpaceFragment"
+            app:destination="@id/personalSpaceFragment" />
+        <action
+            android:id="@+id/action_chatFragment_to_mainFragmentEmployee"
+            app:destination="@id/mainFragmentView" />
+
+
+    </fragment>
+</navigation>

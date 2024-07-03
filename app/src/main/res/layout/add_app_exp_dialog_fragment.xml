@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="8dp">
+        <LinearLayout
+            android:id="@+id/linearLayoutDialog"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+
+            android:gravity="center"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/add_app_exp_title"
+                android:gravity="center"
+                android:padding="5dp"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:textAlignment="center"
+                android:layout_gravity="center"
+                android:paddingBottom="3dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/chose_operation_type"
+                android:layout_marginStart="@dimen/space60"
+                android:layout_marginEnd="@dimen/space60"
+                android:textSize="@dimen/h5"
+                android:textAlignment="center"
+                android:layout_gravity="center"
+                android:paddingBottom="3dp"/>
+            <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+                android:id="@+id/type_selector"
+                android:layout_width="220dp"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:paddingStart="8dp"
+
+                android:paddingEnd="25dp"
+                android:layout_gravity="center"
+                android:dropDownWidth="wrap_content"
+                android:dropDownVerticalOffset="40dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:popupBackground="@color/colorPrimaryLight"
+                android:background="@drawable/selector_dropdown"
+                app:layout_constraintTop_toBottomOf="@id/et_container3"
+                android:spinnerMode="dropdown"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_marginStart="@dimen/space60"
+                android:layout_marginEnd="@dimen/space60"
+                android:layout_marginTop="@dimen/space5"
+                style="@style/helpTextOnBack"
+                android:textAlignment="center"
+                android:layout_height="wrap_content"
+                android:text="@string/chose_operation_status"/>
+
+            <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+                android:id="@+id/status_selector"
+                android:layout_marginTop="@dimen/space5"
+                android:layout_width="220dp"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:paddingStart="8dp"
+
+                android:paddingEnd="25dp"
+                android:layout_gravity="center"
+                android:dropDownWidth="wrap_content"
+                android:dropDownVerticalOffset="40dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:popupBackground="@color/colorPrimaryLight"
+                android:background="@drawable/selector_dropdown"
+                app:layout_constraintTop_toBottomOf="@id/et_container3"
+                android:spinnerMode="dropdown"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/expRoleLayout"
+                android:layout_width="wrap_content"
+                android:layout_marginTop="@dimen/space5"
+                android:layout_height="wrap_content"
+                android:textColorHint="?colorPrimaryUltraDark"
+                app:hintTextAppearance="@style/hintForCustomEditTextStyle"
+                android:hint="@string/reason"
+
+                style="@style/mainCustomTextInputLayoutStyle">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/expReasonInput"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:minWidth="@dimen/space280"
+                    android:inputType="textMultiLine"
+                    android:layout_marginStart="@dimen/space20"
+                    android:layout_marginEnd="@dimen/space20"
+                    android:maxWidth="280dp"
+                    android:maxLength="180"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:paddingStart="4dp"
+                    android:paddingTop="8dp"
+                    android:paddingEnd="4dp"
+                    android:paddingBottom="8dp"
+                    android:text=""
+                    android:textColor="?colorPrimaryUltraDark"
+                    android:textSize="@dimen/h3" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:paddingBottom="@dimen/space5"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_marginStart="@dimen/space60"
+                    android:layout_marginEnd="@dimen/space60"
+                    style="@style/helpTextOnBack"
+                    android:textAlignment="center"
+                    android:layout_height="wrap_content"
+                    android:text="@string/addPointsNum"/>
+                <EditText
+                    android:id="@+id/user_points"
+                    android:background="@drawable/et_custom"
+                    android:paddingTop="@dimen/space5"
+                    android:layout_marginStart="@dimen/space90"
+                    android:layout_marginEnd="@dimen/space90"
+                    android:minWidth="@dimen/space90"
+                    android:textSize="@dimen/h3"
+                    android:inputType="numberDecimal"
+                    android:paddingBottom="@dimen/space8"
+                    android:paddingLeft="@dimen/space8"
+                    android:paddingRight="@dimen/space8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+
+            <CheckBox
+                android:id="@+id/add_file_check"
+                android:text="@string/add_file_question"
+                android:theme="@style/custom_checkbox"
+                android:layout_marginTop="15dp"
+                android:textColor="?colorPrimaryUltraDark"
+                android:textSize="16sp"
+                android:textAlignment="center"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <LinearLayout
+                android:id="@+id/file_info_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/file_name" />
+                <EditText
+                    android:id="@+id/fileName"
+                    android:gravity="center"
+                    android:padding="6dp"
+                    android:maxLines="3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/hintFileName"
+                    android:background="@drawable/et_custom"
+                    android:inputType="textMultiLine"
+                    android:autofillHints="" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <Button
+                    android:id="@+id/save_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="?colorPrimaryUltraDark"
+                    android:text="@string/save"
+                    style="?android:attr/buttonBarButtonStyle" />
+                <Button
+                    android:id="@+id/cancel_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="?colorPrimaryUltraDark"
+                    android:text="@string/cancel"
+                    style="?android:attr/buttonBarButtonStyle" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/add_file_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center">
+                <Button
+                    android:id="@+id/button_chose_file"
+                    android:layout_width="match_parent"
+                    android:visibility="gone"
+                    android:layout_height="wrap_content"
+                    style="@style/main_button_style"
+                    android:background="@drawable/btn_header"
+                    android:padding="10dp"
+                    android:text="@string/chose_doc" />
+                <TextView
+                    android:visibility="gone"
+                    android:id="@+id/hintText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/chosed_file"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/linearLayoutDialog" />
+                <ImageView
+                    android:id="@+id/image1"
+                    android:visibility="gone"
+                    android:layout_width="250dp"
+                    android:layout_height="300dp"
+                    android:scaleType="centerCrop"
+                    android:padding="10dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/hintText" />
+
+                <com.github.barteksc.pdfviewer.PDFView
+                    android:visibility="gone"
+                    android:id="@+id/pdf1"
+                    android:layout_width="250dp"
+                    android:layout_height="300dp"
+                    android:layout_margin="10dp"
+                    android:padding="10dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/hintText" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

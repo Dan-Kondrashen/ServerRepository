@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/space110">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginStart="@dimen/space8"
+            android:layout_marginEnd="@dimen/space8"
+            android:layout_marginTop="@dimen/space8"
+            >
+            <LinearLayout
+                android:id="@+id/languagePrefView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/languageText"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    style="@style/mainTextOnBack"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="@dimen/space5"
+                    android:layout_weight="0.75"
+                    android:text="@string/application_language_text" />
+
+                <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+                    android:id="@+id/languageSelector"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingStart="@dimen/space5"
+                    android:paddingTop="@dimen/space5"
+                    android:paddingBottom="@dimen/space5"
+                    android:paddingEnd="@dimen/space45"
+                    android:background="@drawable/selector_dropdown" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/themeBtn"
+                style="@style/list_button_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/space10"
+                android:layout_marginBottom="5dp"
+                android:gravity="center"
+                android:text="@string/app_theme"
+                android:textAlignment="center"
+                android:textSize="@dimen/h4"
+                android:textStyle="bold" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/themeRecycle"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space3"
+                android:orientation="vertical"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+        </LinearLayout>
+    </ScrollView>
+    <LinearLayout
+        android:id="@+id/prefBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginStart="@dimen/space8"
+        android:layout_marginEnd="@dimen/space8"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/space55"
+        android:gravity="center">
+        <Button
+            android:id="@+id/applySettings"
+            android:layout_width="0dp"
+            style="@style/main_button_style"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="@dimen/space3"
+            android:text="@string/apply"/>
+        <Button
+            android:id="@+id/resetSettings"
+            android:layout_width="0dp"
+            style="@style/main_button_style"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/space3"
+            android:text="@string/resetPref"/>
+
+    </LinearLayout>
+    <include
+        android:id="@+id/bottom_bar"
+        layout="@layout/bottom_nav_bar" />
+</RelativeLayout>

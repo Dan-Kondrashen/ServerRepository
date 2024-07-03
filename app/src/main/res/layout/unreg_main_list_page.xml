@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/documentsNewText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="16dp"
+                android:paddingTop="20dp"
+                android:paddingEnd="10dp"
+                android:paddingBottom="5dp"
+                android:text="@string/document_resumes"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toTopOf="parent" />
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/document_resume_recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="40dp"
+                android:paddingRight="40dp"
+                android:clipToPadding="false"
+                android:layout_marginBottom="5dp"
+                android:orientation="horizontal"
+                android:layout_below ="@id/documentsNewText"
+                app:layout_constraintTop_toBottomOf="@id/documentsNewText"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager">
+            </androidx.recyclerview.widget.RecyclerView>
+            <TextView
+                android:id="@+id/document_vacancy_text"
+                android:paddingTop="20dp"
+                android:paddingBottom="5dp"
+                android:paddingStart="16dp"
+                android:paddingEnd="10dp"
+                android:textStyle="bold"
+                android:textSize="28sp"
+                android:textColor="@color/black"
+                android:text="@string/document_vacancys"
+                android:layout_width="match_parent"
+                app:layout_constraintTop_toBottomOf="@id/document_resume_recycler_view"
+                android:textAlignment="center"
+                android:layout_height="wrap_content"
+                android:layout_below ="@id/document_resume_recycler_view">
+            </TextView>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/document_for_user_abilities_recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/document_vacancy_text"
+                android:paddingLeft="40dp"
+                android:paddingRight="40dp"
+                android:clipToPadding="false"
+                android:orientation="horizontal"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintTop_toBottomOf="@+id/document_vacancy_text" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+    <include layout="@layout/extra_bar"
+        android:id="@+id/extra_bar"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

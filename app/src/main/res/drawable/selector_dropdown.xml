@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector>
+    <item>
+        <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+            <item >
+                <shape xmlns:android="http://schemas.android.com/apk/res/android">
+
+                    <stroke android:width="2dp" android:color="?colorPrimaryUltraDark"/>
+
+                    <solid android:color="?colorPrimaryLight"/>
+
+                    <corners android:radius="5dp"/>
+
+                </shape>
+            </item>
+            <item android:width="40dp" android:height="40dp" android:right="3dp" android:gravity="center_vertical|end" android:drawable="@drawable/baseline_arrow_drop_down_circle_40">
+            </item>
+        </layer-list>
+    </item>
+</selector>

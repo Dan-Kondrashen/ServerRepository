@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:padding="@dimen/space5"
+    android:layout_marginEnd="@dimen/spaceLR">
+
+
+
+    <LinearLayout
+        android:id="@+id/chatView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/comment_block_square_dark"
+        android:layout_alignParentStart="true"
+        android:orientation="vertical"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/chatInfo"
+            android:maxWidth="@dimen/maxWidth"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/space10"
+            tools:text="Hi, joe how are you, do you like to join our party in next week because you don't like party?"
+            android:textColor="?colorPrimaryUltraDark"
+            android:textSize="@dimen/h3" />
+        <TextView
+            android:id="@+id/idView"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:id="@+id/chatTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/space10"
+            android:layout_marginBottom="@dimen/space5"
+            android:drawablePadding="@dimen/space5"
+            android:maxWidth="@dimen/maxWidth"
+            android:padding="@dimen/space5"
+            android:layout_marginStart="@dimen/space5"
+            tools:text="2024-05-25 12:20:22"
+            android:layout_gravity="end"
+            android:textColor="?colorPrimaryUltraDark"
+            android:textSize="@dimen/h4"
+            app:drawableRightCompat="@drawable/clock" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/buttonsView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:padding="5dp"
+        android:layout_marginStart="@dimen/space5"
+        android:layout_toEndOf="@id/chatView"
+        android:clipToPadding="false"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+
+        <ImageView
+            android:id="@+id/delete_btn"
+            android:layout_width="@dimen/space45"
+            android:padding="@dimen/space5"
+            android:background="@drawable/hidden_list"
+            android:layout_height="@dimen/space45"
+
+            android:src="@drawable/delete_image_btn"
+            android:contentDescription="@string/delete" />
+
+
+    </LinearLayout>
+</RelativeLayout>

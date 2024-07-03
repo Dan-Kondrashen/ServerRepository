@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/list_item_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/space5"
+    android:layout_marginBottom="@dimen/space5"
+    android:layout_marginRight="@dimen/space15"
+    android:layout_marginLeft="@dimen/space15"
+    android:elevation="8dp"
+    android:translationZ="1000dp"
+    android:transitionName="@string/unanimated_item"
+    android:background="@drawable/border_for_main_viewed_item"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <TextView
+        android:id="@+id/themeTitle"
+        android:layout_marginTop="@dimen/space10"
+        android:layout_marginBottom="@dimen/space10"
+        android:layout_marginEnd="@dimen/space20"
+        android:layout_marginStart="@dimen/space15"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/border_for_document_preview"
+        android:textStyle="bold"
+        android:padding="@dimen/space5"
+        android:gravity="center"
+        android:textSize="18sp"
+        android:ellipsize="end"
+        android:minLines="2"
+        android:maxLines="2"
+        tools:text="Название документа" />
+
+    <ImageView
+        android:id="@+id/imageTheme"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:scaleType="centerCrop"
+        android:layout_below="@id/themeTitle"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="@dimen/space15"
+        android:layout_marginEnd="20dp" />
+    <TextView
+        android:id="@+id/descText"
+        android:layout_below="@id/imageTheme"
+        android:padding="@dimen/space3"
+        android:text="@string/desc"
+        android:textStyle="bold"
+        android:textSize="@dimen/h4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/space15"
+        android:layout_marginEnd="@dimen/space20"/>
+    <TextView
+        android:id="@+id/descInfo"
+        android:layout_below="@id/descText"
+        android:padding="@dimen/space3"
+        android:maxLines="5"
+        android:ellipsize="end"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/space20"
+        android:layout_marginStart="@dimen/space15"
+        android:layout_marginEnd="@dimen/space20"/>
+
+</RelativeLayout>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/list_item_view"
+    android:orientation="horizontal"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="3dp"
+    android:layout_marginBottom="3dp"
+    android:layout_marginRight="5dp"
+    android:layout_marginLeft="5dp"
+    app:flow_wrapMode="none"
+    android:gravity="center_vertical"
+    android:elevation="8dp"
+    android:translationZ="1000dp"
+    android:transitionName="@string/unanimated_item"
+    android:background="@drawable/border_simple_list_item"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <TextView
+        android:id="@+id/list_item_knowledge_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="10dp"
+        android:layout_alignParentStart="true"
+
+        android:layout_centerVertical="true"
+        android:layout_marginStart="10dp"
+        android:gravity="center|start"
+        android:textSize="16sp"
+        android:ellipsize="end"
+        android:minLines="1"
+        android:maxLines="2"
+        tools:text="Знание языка разметки" />
+    <ImageButton
+        android:id="@+id/remove_btn"
+        android:visibility="gone"
+        android:layout_height="45dp"
+        android:layout_toEndOf="@id/list_item_knowledge_text_view"
+        android:layout_marginEnd="5dp"
+        android:layout_centerVertical="true"
+        android:layout_width="45dp"
+        android:background="@drawable/remove_image_btn"
+
+        android:contentDescription="@string/delete" />
+
+</RelativeLayout>

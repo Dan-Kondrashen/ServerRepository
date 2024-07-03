@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/LayoutDialog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="8dp"
+        android:paddingRight="8dp"
+        android:paddingLeft="8dp"
+        android:paddingBottom="32dp"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+
+        <LinearLayout
+            android:id="@+id/itemChoseArchiveType"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginEnd="@dimen/space40"
+            android:layout_marginStart="@dimen/space40"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:orientation="vertical">
+            <Button
+                android:id="@+id/makeResponseBtn"
+                android:layout_marginTop="@dimen/space5"
+                android:layout_width="match_parent"
+                style="@style/main_button_style"
+                android:textStyle="bold"
+
+                android:layout_height="wrap_content"
+                android:text="@string/add_response"/>
+            <Button
+                android:id="@+id/makeFavoriteBtn"
+                android:layout_marginTop="@dimen/space5"
+                android:layout_width="match_parent"
+                style="@style/main_button_style"
+                android:textStyle="bold"
+                android:layout_height="wrap_content"
+                android:text="@string/add_favorite"/>
+            <Button
+                android:id="@+id/hideItemBtn"
+                android:layout_marginTop="@dimen/space5"
+                android:layout_width="match_parent"
+                style="@style/main_button_style"
+                android:textStyle="bold"
+                android:layout_height="wrap_content"
+                android:text="@string/hide_item"/>
+            <Button
+                android:id="@+id/addToArchivesBtn"
+                android:layout_marginTop="@dimen/space5"
+                android:layout_width="match_parent"
+                style="@style/main_button_style"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:text="@string/add_to_custom_archive"/>
+
+            <Button
+                android:id="@+id/cancelBtn"
+                android:drawableEnd="@drawable/remove_image_btn"
+                android:paddingStart="@dimen/space60"
+                android:layout_marginTop="@dimen/space5"
+                android:layout_width="match_parent"
+                style="@style/main_button_style"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:text="@string/cancel"
+                tools:ignore="RtlSymmetry" />
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

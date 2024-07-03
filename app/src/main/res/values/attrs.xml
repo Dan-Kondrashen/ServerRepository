@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="colorPrimaryUltraDark" format="color" />
+    <attr name="colorPrimaryUltraLight" format="color" />
+    <attr name="colorPrimaryLight" format="color" />
+    <attr name="colorAlert" format="color" />
+    <attr name="colorTextHeader" format="color" />
+    <attr name="colorAlertDark" format="color" />
+    <attr name="colorSuccess" format="color" />
+    <attr name="colorSuccessDark" format="color" />
+</resources>

@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/LayoutDialog"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+
+
+    android:gravity="center">
+
+    <LinearLayout
+        android:background="@drawable/square_floating_list_item_light"
+        android:id="@+id/chatInfoView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/authorInfoView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center|end"
+            android:orientation="horizontal"
+            android:padding="5dp">
+
+            <TextView
+                android:id="@+id/author_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginEnd="@dimen/space10"
+                android:maxWidth="@dimen/space280"
+                android:textAppearance="@style/fontHeader"
+                android:maxLines="3"
+                android:padding="@dimen/space5"
+                android:paddingBottom="3dp"
+                tools:text="Иванов Иван Иванович"
+                android:textAlignment="center"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:layout_editor_absoluteX="8dp" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/image_card"
+                android:layout_width="65dp"
+                android:layout_marginBottom="1dp"
+                android:layout_height="65dp"
+
+                android:layout_marginEnd="@dimen/space10"
+                app:cardCornerRadius="100dp">
+
+                <ImageView
+                    android:id="@+id/avatar"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/user_svg" />
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/documentInfoView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/documentText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:textAppearance="@style/fontHeader"
+                android:gravity="start"
+
+                android:maxWidth="130dp"
+                android:maxLines="2"
+                android:paddingStart="@dimen/space5"
+                android:paddingEnd="@dimen/space5"
+                android:paddingBottom="@dimen/space3"
+                android:paddingTop="@dimen/space3"
+                android:text="@string/name_theme_chat"
+                android:textSize="@dimen/h3"
+                android:textStyle="bold"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:layout_editor_absoluteX="8dp" />
+
+            <TextView
+                android:id="@+id/documentInfo"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                tools:text="fronend разработчик на javascript"
+                android:ellipsize="end"
+                android:gravity="start"
+                android:maxLines="2"
+                android:paddingStart="@dimen/space5"
+                android:paddingEnd="@dimen/space5"
+                android:paddingBottom="@dimen/space3"
+                android:paddingTop="@dimen/space3"
+                android:textSize="@dimen/h3"
+                android:textStyle="bold"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:layout_editor_absoluteX="8dp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/messageRecycle"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:stackFromEnd="true"
+        android:layout_weight="1"
+        android:layout_below="@+id/chatInfoView"
+        android:padding="5dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/chatInfoView"
+        app:layout_constraintBottom_toTopOf="@id/messageFunctionalView"
+        tools:listitem="@layout/chat_another_user_list_item"/>
+
+    <TextView
+        android:id="@+id/noMessage"
+        android:layout_marginStart="@dimen/space60"
+        android:layout_marginEnd="@dimen/space60"
+        style="@style/helpTextOnBack"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:text="@string/no_messages"
+        app:layout_constraintBottom_toBottomOf="@+id/messageRecycle"
+        app:layout_constraintTop_toBottomOf="@+id/chatInfoView" />
+
+    <LinearLayout
+        android:id="@+id/messageFunctionalView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:gravity="center"
+        android:padding="@dimen/space5"
+        android:background="@drawable/square_floating_list_item_light"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/password_view"
+            style="@style/mainCustomTextInputLayoutStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="@string/enter_message"
+            android:textColorHint="?colorPrimaryUltraDark"
+            app:hintTextAppearance="@style/hintForCustomEditTextStyle"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_message"
+                android:layout_width="290dp"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:drawablePadding="6dp"
+                android:drawableTint="?colorPrimaryUltraDark"
+                android:inputType="textMultiLine"
+                android:maxLength="500"
+                android:maxLines="6"
+                android:padding="15dp"
+                android:layout_marginBottom="@dimen/space5"
+                android:text=""
+                android:textSize="18sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <ImageView
+            android:id="@+id/sendComm"
+            android:visibility="gone"
+            android:layout_marginStart="@dimen/space5"
+            android:layout_width="@dimen/imageViewWidth55"
+            android:layout_height="@dimen/imageViewHeight55"
+            android:src="@drawable/send_messag_svg"
+            android:padding="@dimen/space5"
+            />
+    </LinearLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

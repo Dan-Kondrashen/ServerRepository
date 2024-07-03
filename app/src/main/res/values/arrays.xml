@@ -1,0 +1,88 @@
+<resources>
+    <!-- Reply Preference -->
+    <string-array name="reply_entries">
+        <item>Reply</item>
+        <item>Reply to all</item>
+    </string-array>
+
+    <string-array name="reply_values">
+        <item>reply</item>
+        <item>reply_all</item>
+    </string-array>
+    <string-array name="archive_start">
+        <item>Просмотры view</item>
+        <item>Отклики response</item>
+        <item>Избранное favorite</item>
+        <item>Скрытые dismiss</item>
+    </string-array>
+    <string-array name="skill_types">
+        <item>Навыки</item>
+        <item>Специальности</item>
+    </string-array>
+    <string-array name="date_types">
+        <item>За все время</item>
+        <item>По годам</item>
+        <item>По месяцам</item>
+        <item>По дням</item>
+    </string-array>
+    <string-array name="pref_uploads">
+        <item>Только когда подключен к сети через Wi-Fi</item>
+        <item>При наличии любого подключения к интернету</item>
+    </string-array>
+    <string-array name="pref_languages">
+        <item>Английский (English)</item>
+        <item>Русский</item>
+    </string-array>
+    <string-array name="pref_language_short">
+        <item>en</item>
+        <item>ru</item>
+    </string-array>
+    <string-array name="pref_app_name_theme">
+        <item>Cerulean Calm</item>
+        <item>Bordo Careers</item>
+    </string-array>
+    <string-array name="pref_user_type">
+        <item>Все</item>
+        <item>Работодатели</item>
+        <item>Соискатели</item>
+
+    </string-array>
+    <string-array name="pref_users_status">
+        <item>Подтверждены</item>
+        <item>Не подтверждены</item>
+    </string-array>
+    <string-array name="pref_user_status">
+        <item>Подтвержден</item>
+        <item>Не подтвержден</item>
+    </string-array>
+    <string-array name="app_exp_type">
+        <item>Добавление баллов</item>
+        <item>Уменьшение баллов</item>
+    </string-array>
+
+    <string-array name="app_exp_status">
+        <item>Подтверждена</item>
+        <item>Не подтверждена</item>
+    </string-array>
+    <string-array name="pref_user_info_type">
+        <item>Почта</item>
+        <item>Телефон</item>
+    </string-array>
+    <string-array name="pref_app_theme">
+        <item>Монохромная тема в голубых и синих тонах. n\
+            Оттенки синего и голубого создают ощущение простора n\
+            бесконечного неба и широты безбрежного моря. </item>
+        <item>Контрастная тема в красных и белых тонах</item>
+    </string-array>
+    <string-array name="pref_theme_ids">
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+
+    <string-array name="pref_document_type">
+        <item>По дате добавления</item>
+        <item>По количеству просмотров</item>
+        <item>По размеру указанной З/П</item>
+        <item>По уровню разместившего пользователя</item>
+    </string-array>
+</resources>

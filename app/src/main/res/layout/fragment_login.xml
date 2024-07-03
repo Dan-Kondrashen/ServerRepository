@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fragmentLogin">
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/email_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColorHint="?colorPrimaryUltraDark"
+
+        app:hintTextAppearance="@style/hintForCustomEditTextStyle"
+        app:layout_constraintBottom_toTopOf="@+id/password_view"
+        style="@style/mainCustomTextInputLayoutStyle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        android:hint="@string/email">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_email"
+            android:layout_width="280dp"
+            android:layout_height="50dp"
+            android:layout_centerInParent="true"
+            android:layout_marginBottom="5dp"
+            android:drawableStart="@drawable/resized_email_item"
+            android:drawablePadding="6dp"
+            android:drawableTint="?colorPrimaryUltraDark"
+            android:inputType="textEmailAddress"
+            android:padding="15dp"
+            android:textSize="18sp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/password_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/mainCustomTextInputLayoutStyle"
+        android:textColorHint="?colorPrimaryUltraDark"
+        app:hintTextAppearance="@style/hintForCustomEditTextStyle"
+        android:hint="@string/password"
+        app:endIconMode="password_toggle"
+        app:endIconTint="?colorPrimaryUltraDark"
+        app:layout_constraintBottom_toTopOf="@+id/user_role"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_password"
+            android:layout_width="280dp"
+            android:layout_height="50dp"
+            android:layout_centerInParent="true"
+            android:drawableStart="@drawable/padlock_svg"
+            android:drawablePadding="4dp"
+            android:layout_marginBottom="5dp"
+            android:textColorHint="@color/colorPrimaryUltraDark"
+            android:inputType="textPassword"
+            android:padding="15dp"
+            android:textColor="@color/colorPrimaryUltraDark"
+            android:textSize="18sp"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/app_nickname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:paddingStart="50dp"
+        android:paddingEnd="50dp"
+        android:text="@string/app_nick"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:background="@drawable/border_for_floating_menu"
+        app:layout_constraintBottom_toTopOf="@+id/email_view"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Spinner
+        android:id="@+id/user_role"
+        android:layout_width="220dp"
+        android:layout_height="50dp"
+        android:background="@drawable/selector_dropdown"
+        android:padding="15dp"
+        android:popupBackground="@color/colorPrimaryLight"
+        android:spinnerMode="dropdown"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.500" />
+
+    <TextView
+        android:id="@+id/result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:freezesText="true"
+        android:gravity="center_vertical"
+        android:padding="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/join_as_guest" />
+    <TextView
+        android:id="@+id/textInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:freezesText="true"
+        android:paddingBottom="@dimen/space3"
+        android:paddingEnd="@dimen/space10"
+        android:paddingStart="@dimen/space10"
+        android:gravity="center_vertical"
+        android:text="@string/swipe_to_reg"
+        android:lines="2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/result" />
+
+
+    <LinearLayout
+        android:id="@+id/login_buttons"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@+id/user_role"
+        android:layout_marginTop="7dp">
+
+        <Button
+            android:id="@+id/login"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:minWidth="@dimen/space120"
+            android:layout_height="match_parent"
+            style="@style/main_button_style"
+            android:paddingLeft="7dp"
+            android:paddingRight="7dp"
+            android:layout_margin="4dp"
+            android:text="@string/action_login"
+            app:layout_constraintTop_toBottomOf="@+id/user_role" />
+
+        <Button
+            android:id="@+id/lose_pass"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:minWidth="@dimen/space120"
+            android:visibility="gone"
+            style="@style/main_button_style"
+            android:paddingLeft="7dp"
+            android:paddingRight="7dp"
+            android:layout_margin="4dp"
+            android:text="@string/action_getpass" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/join_as_guest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        android:minWidth="@dimen/space120"
+        android:visibility="gone"
+        style="@style/main_button_style"
+        android:paddingLeft="7dp"
+        android:paddingRight="7dp"
+        android:text="@string/join_as_guest"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/login_buttons" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

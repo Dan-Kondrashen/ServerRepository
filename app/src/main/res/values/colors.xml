@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+<!-- Theme1-->
+    <color name="colorWarning">#85193B</color>
+    <color name="colorWarningDeep">#5A0922</color>
+    <color name="colorPrimary">#2293C6</color>
+    <color name="colorPrimaryDark">#1674A6</color>
+    <color name="colorPrimaryUltraDark">#093E67</color>
+    <color name="colorSuccess">#40BF1D</color>
+    <color name="colorSuccessDark">#217A09</color>
+    <color name="colorPrimaryLight">#63C0E4</color>
+    <color name="colorPrimaryUltraLight">#90C8E6</color>
+
+    <!-- Theme1-->
+    <color name="colorWarning2">#FFD537</color>
+    <color name="colorWarningDeep2">#FF861D</color>
+    <color name="colorPrimary2">#64485c</color>
+    <color name="colorPrimaryDark2">#501b1d</color>
+    <color name="colorPrimaryUltraDark2">#DAD9D9</color>
+    <color name="colorSuccess2">#40BF1D</color>
+    <color name="colorSuccessDark2">#217A09</color>
+    <color name="colorPrimaryLight2">#83677b</color>
+    <color name="colorPrimaryUltraLight2">#2e1114</color>
+
+    <!-- Theme1-->
+    <color name="button_clicked_start">#39AA9F</color>
+    <color name="button_clicked_end">#248179</color>
+    <color name="button_unpressed_start">#3CC1B5</color>
+    <color name="button_unpressed_end">#3DACA1</color>
+
+    <color name="colorGradientStart">#8AB551</color>
+    <color name="colorGradientStart1_2">#45631C</color>
+    <color name="colorGradientStart2">#D39769</color>
+    <color name="colorGradientStart2_2">#9A6A44</color>
+    <color name="colorGradientStart3">#C6783C</color>
+    <color name="colorGradientStart3_2">#854E22</color>
+
+    <color name="colorMiddleStart">#6D9537</color>
+    <color name="colorMiddleStart1_2">#597E28</color>
+
+    <color name="colorGradientEnd2">#E8DA65</color>
+    <color name="colorGradientEnd2_2">#B3A63C</color>
+    <color name="colorGradientEnd3">#B1A121</color>
+    <color name="colorGradientEnd3_2">#807413</color>
+    <color name="colorGradientEnd">#4C701D</color>
+    <color name="colorGradientEnd1_2">#324C0F</color>
+
+    <color name="colorDependStart">#95C57B</color>
+    <color name="colorDependEnd">#619329</color>
+
+    <color name="colorMainGradientStart">#C7EDB9</color>
+    <color name="colorMainGradientEnd">#8ADCCC</color>
+
+</resources>

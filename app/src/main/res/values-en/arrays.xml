@@ -1,0 +1,88 @@
+<resources>
+    <!-- Reply Preference -->
+    <string-array name="reply_entries">
+        <item>Reply</item>
+        <item>Reply to all</item>
+    </string-array>
+
+    <string-array name="reply_values">
+        <item>reply</item>
+        <item>reply_all</item>
+    </string-array>
+    <string-array name="archive_start">
+        <item>Views view</item>
+        <item>Responses response</item>
+        <item>Favorite favorite</item>
+        <item>Hidden dismiss</item>
+    </string-array>
+    <string-array name="skill_types">
+        <item>Knowledge</item>
+        <item>Specializations</item>
+    </string-array>
+    <string-array name="date_types">
+        <item>For all the time</item>
+        <item>By years</item>
+        <item>By months</item>
+        <item>By days</item>
+    </string-array>
+    <string-array name="pref_uploads">
+        <item>Only when connected to a network via Wi-Fi</item>
+        <item>If you have any internet connection</item>
+    </string-array>
+    <string-array name="pref_languages">
+        <item>England</item>
+        <item>Russian (Русский)</item>
+    </string-array>
+    <string-array name="pref_language_short">
+        <item>en</item>
+        <item>ru</item>
+    </string-array>
+    <string-array name="pref_app_name_theme">
+        <item>Cerulean Calm</item>
+        <item>Bordo Careers</item>
+    </string-array>
+    <string-array name="pref_user_type">
+        <item>All</item>
+        <item>Employers</item>
+        <item>Job applicants</item>
+
+    </string-array>
+    <string-array name="app_exp_status">
+        <item>Confirmed</item>
+        <item>Not confirmed</item>
+    </string-array>
+
+    <string-array name="app_exp_type">
+        <item>Increase points</item>
+        <item>Decrease points</item>
+    </string-array>
+
+    <string-array name="pref_users_status">
+        <item>Confirmed</item>
+        <item>Not confirmed</item>
+    </string-array>
+    <string-array name="pref_user_status">
+        <item>Confirmed</item>
+        <item>Not confirmed</item>
+    </string-array>
+    <string-array name="pref_user_info_type">
+        <item>Email</item>
+        <item>Phone</item>
+    </string-array>
+    <string-array name="pref_document_type">
+        <item>By date of addition</item>
+        <item>By the number of views</item>
+        <item>According to the size of the specified S/N</item>
+        <item>By the level of the user who posted it</item>
+    </string-array>
+    <string-array name="pref_app_theme">
+        <item>Монохромная тема в голубых и синих тонах. n\
+            Оттенки синего и голубого создают ощущение простора n\
+            бесконечного неба и широты безбрежного моря. </item>
+        <item>Contrasting theme in red and white tones</item>
+    </string-array>
+    <string-array name="pref_theme_ids">
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+</resources>

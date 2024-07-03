@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout
+        android:id="@+id/analiticGroupView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="@dimen/space5"
+        android:gravity="center">
+        <Button
+            android:id="@+id/mainAnalytic"
+            android:layout_width="0dp"
+            style="@style/main_button_style"
+            android:background="@drawable/hidden_list_pressed"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="@dimen/space3"
+            android:text="@string/all_analitic"/>
+
+        <Button
+            android:id="@+id/userAnalytic"
+            android:layout_width="0dp"
+            style="@style/main_button_style"
+            android:background="@drawable/hidden_list"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/space3"
+            android:text="@string/user_analitic"/>
+
+    </LinearLayout>
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/view_pager_for_analysis_graph"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/analiticGroupView"
+        android:layout_marginStart="@dimen/space5"
+        android:layout_marginTop="@dimen/space5"
+        android:layout_marginEnd="@dimen/space5"
+        android:layout_marginBottom="@dimen/space55"
+        android:clipToPadding="false"/>
+    <include
+        android:id="@+id/bottom_bar"
+        layout="@layout/bottom_nav_bar" />
+</RelativeLayout>

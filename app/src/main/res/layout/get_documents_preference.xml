@@ -1,0 +1,403 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_gravity="top"
+    android:fitsSystemWindows="true"
+    android:layout_marginTop="-20dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/space110"
+        android:padding="@dimen/space5"
+        android:background="@drawable/border_for_extra_top_parametrs">
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="0dp">
+            <LinearLayout
+                android:id="@+id/documents_pref_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:orientation="vertical">
+    <!--            android:visibility="gone"-->
+                <LinearLayout
+                    android:id="@+id/documentsPrefBlock"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/documentsPref"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="top"
+                        android:layout_marginTop="@dimen/space10"
+                        android:layout_marginStart="@dimen/space10"
+                        android:layout_marginEnd="@dimen/space10"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto_slab_variable_font_wght"
+                            android:paddingBottom="@dimen/space5"
+                            android:paddingStart="@dimen/space5"
+                            android:paddingEnd="@dimen/space5"
+                            android:text="@string/documents_pref_info"
+                            android:textSize="@dimen/h3"
+                            android:textStyle="bold" />
+
+                        <LinearLayout
+                            android:id="@+id/filterTypeSelectorView"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+                            <TextView
+                                android:textStyle="bold"
+                                android:padding="@dimen/space5"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/chose_filter_type"/>
+                            <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+                                android:id="@+id/filterTypeSelector"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/space5"
+                                android:padding="@dimen/space5"
+                                android:layout_marginBottom="@dimen/space5"
+                                android:background="@drawable/selector_dropdown" />
+
+                        </LinearLayout>
+                        <com.google.android.material.switchmaterial.SwitchMaterial
+                            android:id="@+id/inversionSwitch"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textAllCaps="false"
+                            android:text="@string/add_inversion"/>
+                        <com.google.android.material.switchmaterial.SwitchMaterial
+                            android:id="@+id/addPref"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textAllCaps="false"
+                            android:text="@string/add_extra_document_pref"/>
+
+                        <LinearLayout
+                            android:id="@+id/extraPref"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="top"
+                            android:visibility="gone"
+                            android:orientation="vertical"
+                            android:layout_marginBottom="@dimen/space5">
+                            <CheckBox
+                                android:id="@+id/documentSalaryQuestion"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:theme="@style/custom_checkbox"
+                                android:textColor="?colorPrimaryUltraDark"
+                                android:layout_marginBottom="@dimen/space5"
+                                android:padding="@dimen/space5"
+                                android:text="@string/input_salary_info" />
+    <!--                        android:visibility="gone"-->
+                            <LinearLayout
+                                android:id="@+id/documentSalaryView"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:visibility="gone"
+                                android:orientation="horizontal">
+                                <com.google.android.material.textfield.TextInputLayout
+                                    android:id="@+id/salaryStartView"
+                                    android:layout_width="0dp"
+                                    android:layout_weight="1"
+                                    android:layout_height="wrap_content"
+                                    android:textColorHint="?colorPrimaryUltraDark"
+                                    app:hintTextAppearance="@style/hintForCustomEditTextStyle"
+                                    style="@style/mainCustomTextInputLayoutStyle"
+                                    android:layout_marginEnd="@dimen/space5"
+                                    android:hint="@string/min_salary">
+
+                                    <com.google.android.material.textfield.TextInputEditText
+                                        android:id="@+id/etSalaryStart"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerInParent="true"
+                                        android:layout_marginBottom="5dp"
+                                        android:drawableTint="?colorPrimaryUltraDark"
+                                        android:drawableEnd="@drawable/rub_bold_svg"
+                                        android:textAlignment="textEnd"
+                                        android:inputType="numberDecimal"
+                                        android:paddingTop="@dimen/space5"
+                                        android:paddingBottom="@dimen/space5"
+                                        android:paddingEnd="@dimen/space5"
+                                        android:paddingStart="@dimen/space8"
+                                        android:textSize="18sp" />
+                                </com.google.android.material.textfield.TextInputLayout>
+                                <com.google.android.material.textfield.TextInputLayout
+                                    android:id="@+id/salaryEndView"
+                                    android:layout_width="0dp"
+                                    android:layout_weight="1"
+                                    android:layout_height="wrap_content"
+                                    android:textColorHint="?colorPrimaryUltraDark"
+                                    app:hintTextAppearance="@style/hintForCustomEditTextStyle"
+                                    style="@style/mainCustomTextInputLayoutStyle"
+                                    android:hint="@string/max_salary">
+
+                                    <com.google.android.material.textfield.TextInputEditText
+                                        android:id="@+id/etSalaryEnd"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerInParent="true"
+                                        android:layout_marginBottom="5dp"
+                                        android:drawableTint="?colorPrimaryUltraDark"
+                                        android:textAlignment="textEnd"
+                                        android:drawableEnd="@drawable/rub_bold_svg"
+                                        android:inputType="numberDecimal"
+                                        android:paddingTop="@dimen/space5"
+                                        android:paddingBottom="@dimen/space5"
+                                        android:paddingEnd="@dimen/space5"
+                                        android:paddingStart="@dimen/space8"
+                                        android:textSize="18sp" />
+                                </com.google.android.material.textfield.TextInputLayout>
+                            </LinearLayout>
+
+                            <CheckBox
+                                android:id="@+id/documentNumQuestion"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:theme="@style/custom_checkbox"
+                                android:textColor="?colorPrimaryUltraDark"
+                                android:layout_marginBottom="@dimen/space5"
+                                android:padding="@dimen/space5"
+                                android:text="@string/chose_document_num" />
+                            <LinearLayout
+                                android:id="@+id/documentNumberView"
+                                android:layout_width="match_parent"
+                                android:visibility="gone"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="@dimen/space3"
+                                android:orientation="vertical">
+                                <!--                            android:inputType="numberPassword"-->
+                                <com.google.android.material.textfield.TextInputLayout
+                                    android:id="@+id/numView"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:textColorHint="?colorPrimaryUltraDark"
+                                    app:hintTextAppearance="@style/hintForCustomEditTextStyle"
+                                    app:layout_constraintBottom_toTopOf="@+id/password_view"
+                                    style="@style/mainCustomTextInputLayoutStyle"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintHorizontal_bias="0.496"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    android:hint="@string/input_documents_number">
+
+                                    <com.google.android.material.textfield.TextInputEditText
+                                        android:id="@+id/etNumDocuments"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerInParent="true"
+                                        android:layout_marginBottom="5dp"
+                                        android:drawableStart="@drawable/number_svg"
+                                        android:drawableTint="?colorPrimaryUltraDark"
+                                        android:inputType="numberDecimal"
+                                        android:padding="5dp"
+                                        android:textSize="18sp" />
+                                </com.google.android.material.textfield.TextInputLayout>
+                            </LinearLayout>
+
+                            <CheckBox
+                                android:id="@+id/choseDateIntervalQuestion"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:theme="@style/custom_checkbox"
+                                android:layout_marginBottom="@dimen/space5"
+                                android:textColor="?colorPrimaryUltraDark"
+                                android:padding="@dimen/space5"
+                                android:text="@string/date_info_docs" />
+                            <LinearLayout
+                                android:id="@+id/intervalInfoView"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:visibility="gone"
+                                android:orientation="vertical">
+
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center_vertical">
+
+                                    <TextView
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginEnd="@dimen/space5"
+                                        android:layout_weight="1"
+                                        android:text="@string/choseAnaliticType" />
+
+                                    <Spinner
+                                        android:id="@+id/dateIntervalType"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+
+                                        android:layout_marginStart="@dimen/space5"
+                                        android:layout_weight="1"
+                                        android:background="@drawable/selector_dropdown"
+                                        android:paddingStart="7dp"
+                                        android:paddingTop="7dp"
+                                        android:paddingEnd="27dp"
+                                        android:paddingBottom="7dp" />
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        android:id="@+id/dateStartText"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginEnd="@dimen/space5"
+                                        android:textStyle="bold"
+                                        android:layout_weight="1"
+                                        android:padding="7dp"
+                                        android:text="@string/date_info_docs_start"
+                                        android:textAlignment="center" />
+
+                                    <TextView
+                                        android:id="@+id/dateEndText"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="@dimen/space5"
+                                        android:textStyle="bold"
+                                        android:layout_weight="1"
+                                        android:padding="7dp"
+                                        android:text="@string/end_date"
+                                        android:textAlignment="center" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:layout_marginTop="@dimen/space5">
+
+                                    <Button
+                                        android:id="@+id/dateStart"
+                                        style="@style/main_button_style"
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_marginEnd="@dimen/space5"
+                                        android:layout_weight="1"
+                                        android:drawableEnd="@drawable/calendar_svg"
+                                        android:padding="7dp"
+                                        android:text="@string/date_not_chosen" />
+
+                                    <Button
+                                        android:id="@+id/dateEnd"
+                                        style="@style/main_button_style"
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_marginStart="@dimen/space5"
+                                        android:layout_weight="1"
+                                        android:drawableEnd="@drawable/calendar_svg"
+                                        android:padding="7dp"
+                                        android:text="@string/date_not_chosen" />
+                                </LinearLayout>
+                            </LinearLayout>
+                            <CheckBox
+                                android:id="@+id/documentKnowledgeQuestion"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:theme="@style/custom_checkbox"
+                                android:textColor="?colorPrimaryUltraDark"
+                                android:layout_marginBottom="@dimen/space5"
+                                android:padding="@dimen/space5"
+                                android:text="@string/chose_document_by_know" />
+                            <LinearLayout
+                                android:id="@+id/documentKnowledgeView"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="@dimen/space3"
+                                android:visibility="gone"
+                                android:orientation="vertical">
+                                <!--                            android:inputType="numberPassword"-->
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+                                    <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+                                        android:id="@+id/knowTypeSelector"
+                                        android:layout_width="match_parent"
+                                        android:paddingStart="@dimen/space5"
+                                        android:paddingEnd="@dimen/space15"
+                                        android:background="@drawable/selector_dropdown"
+                                        android:layout_height="wrap_content"
+                                        app:layout_constraintRight_toRightOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent"/>
+                                    <androidx.recyclerview.widget.RecyclerView
+                                        android:id="@+id/knowledgeChoseRecycle"
+                                        android:layout_marginTop="@dimen/space5"
+                                        android:layout_width="match_parent"
+                                        android:minHeight="@dimen/space90"
+                                        android:layout_height="wrap_content"
+                                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                                        android:orientation="vertical"
+                                        app:layout_constraintRight_toRightOf="parent"
+                                        app:layout_constraintTop_toBottomOf="@id/knowTypeSelector"/>
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/space45"
+                    android:visibility="gone"/>
+
+            </LinearLayout>
+        </ScrollView>
+        <Button
+            android:id="@+id/callDocuments"
+            style="@style/main_button_style"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space5"
+            android:layout_marginStart="@dimen/space10"
+            android:layout_marginEnd="@dimen/space10"
+            android:layout_marginBottom="@dimen/space5"
+            android:text="@string/get_documents" />
+        <Button
+            android:id="@+id/call_documents_preference"
+            style="@style/list_button_style"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space3"
+            android:layout_marginStart="@dimen/space10"
+            android:layout_marginEnd="@dimen/space10"
+            android:layout_marginBottom="@dimen/space3"
+            android:text="@string/show_parameters" />
+    </LinearLayout>
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/search_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="55dp"
+        android:layout_gravity="bottom|center"
+        android:layout_marginBottom="50dp"
+
+        android:elevation="5dp"
+        android:background="@drawable/border_for_floating_menu"
+        app:layout_behavior="com.google.android.material.behavior.HideBottomViewOnScrollBehavior"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:searchHintIcon="@drawable/baseline_search_30"
+        app:searchIcon="@drawable/baseline_search_30" />
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

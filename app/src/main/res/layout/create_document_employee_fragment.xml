@@ -1,0 +1,624 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="3dp">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border_for_main_viewed_item"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:paddingBottom="20dp">
+
+            <TableLayout
+                android:id="@+id/tableLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <LinearLayout
+                    android:id="@+id/date"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="10dp"
+                    android:gravity="center|end"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tableLayout">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center|start"
+                        android:text="@string/dateText"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        app:layout_constraintWidth_min="wrap" />
+
+                    <TextView
+                        android:id="@+id/dateInfo"
+                        style="?android:listSeparatorTextViewStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:minWidth="50dp"
+                        android:textSize="16sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:paddingTop="8dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/titleLayout"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:minWidth="280dp"
+                            android:textAlignment="center"
+                            android:textColorHint="?colorPrimaryUltraDark"
+                            app:hintTextAppearance="@style/hintForCustomEditTextStyle"
+                            android:hint="@string/title"
+                            style="@style/mainCustomTextInputLayoutStyle">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/titleInput"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:inputType="textMultiLine"
+                                android:maxWidth="220dp"
+                                android:maxLength="100"
+                                android:maxLines="3"
+                                android:paddingStart="4dp"
+                                android:paddingTop="10dp"
+                                android:paddingEnd="26dp"
+                                android:paddingBottom="10dp"
+                                android:textColor="?colorPrimaryUltraDark"
+                                android:textSize="18sp" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignEnd="@id/titleLayout"
+                            android:layout_centerVertical="true"
+                            android:textAlignment="center"
+                            android:paddingEnd="8dp"
+                            android:paddingTop="2dp"
+                            android:gravity="center|start"
+                            android:maxWidth="190dp"
+                            android:text="@string/important"
+                            android:textSize="28sp"
+                            android:textStyle="bold"
+                            app:layout_constraintWidth_min="wrap" />
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingTop="8dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        android:id="@+id/salaryText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="5dp"
+                        android:text="@string/salary"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <CheckBox
+                        android:id="@+id/salaryCheckbox"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:theme="@style/custom_checkbox"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginEnd="20dp"
+                        android:gravity="center"
+                        android:paddingBottom="5dp"
+                        android:text="@string/salary_check"
+                        android:textSize="16sp"
+                        android:textStyle="italic" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/salary_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <!--                    android:visibility="gone"-->
+                    <LinearLayout
+                        android:id="@+id/min_salary"
+                        android:layout_width="match_parent"
+                        android:visibility="gone"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:gravity="center|start">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.5"
+                            android:gravity="center|start"
+                            android:padding="2dp"
+                            android:text="@string/start_salary"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                        <EditText
+                            android:id="@+id/salaryF"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginEnd="5dp"
+                            android:layout_weight="2"
+                            android:background="@drawable/et_custom"
+                            android:hint="@string/add_start_salary"
+                            android:inputType="numberDecimal"
+                            android:maxWidth="220dp"
+                            android:maxLength="100"
+                            android:padding="6dp"
+                            android:textSize="18sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:gravity="center|start">
+
+                        <TextView
+                            android:id="@+id/end"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1.5"
+                            android:gravity="center|start"
+                            android:padding="2dp"
+                            android:text="@string/end_salary_employee"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+
+                        <EditText
+                            android:id="@+id/salaryS"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginEnd="5dp"
+                            android:layout_weight="2"
+                            android:background="@drawable/et_custom"
+                            android:hint="@string/add_end_salary_employee"
+                            android:inputType="numberDecimal"
+                            android:maxWidth="220dp"
+                            android:maxLength="100"
+                            android:padding="6dp"
+                            android:singleLine="false"
+                            android:textSize="18sp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </TableLayout>
+
+            <Button
+                android:id="@+id/button_knowledge"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/hidden_list_with_arrow"
+                android:text="@string/knowledgeText"
+                android:textColor="?colorPrimaryUltraDark"
+                android:textStyle="bold"
+                app:backgroundTint="@null"
+                app:layout_constraintTop_toBottomOf="@id/tableLayout" />
+
+
+            <LinearLayout
+                android:id="@+id/knowledge_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:layout_marginTop="10dp"
+                android:gravity="center|start"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/button_knowledge">
+
+                <TextView
+                    android:id="@+id/chosen_knowledge_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center|start"
+                    android:text="@string/chosen_know"
+                    android:textSize="16sp"
+                    app:layout_constraintWidth_min="wrap" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/chosen_knowledge_recycle"
+                    android:layout_marginTop="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+
+                    app:layoutManager="com.google.android.flexbox.FlexboxLayoutManager"
+                    android:background="@drawable/border_for_document_maininfo"
+                    android:padding="8dp"/>
+
+                <TextView
+                    android:id="@+id/available_knowledge_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center|start"
+                    android:text="@string/available_know"
+                    android:textSize="16sp"
+                    app:layout_constraintWidth_min="wrap" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/filter"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:layout_weight="1"
+                        android:background="@drawable/et_custom"
+                        android:drawableStart="@drawable/baseline_search_30"
+                        android:drawableTint="?colorPrimaryUltraDark"
+                        android:gravity="center_vertical"
+                        android:hint="@string/filtration_hint_text"
+                        android:paddingTop="8dp"
+                        android:paddingStart="8dp"
+                        android:paddingEnd="8dp"
+                        android:paddingBottom="12dp" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="4dp"
+                            android:text="@string/chose_know_type"
+                            android:textSize="16sp" />
+
+                        <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+                            android:id="@+id/knowledge_info"
+                            android:layout_width="match_parent"
+                            android:layout_height="35dp"
+                            android:layout_marginStart="5dp"
+                            android:background="@drawable/selector_dropdown"
+                            android:padding="6dp"
+                            android:popupBackground="@color/colorPrimaryLight"
+                            android:spinnerMode="dropdown"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/et_container3" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/available_knowledge_recycle"
+                    android:layout_marginTop="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    app:layoutManager="com.google.android.flexbox.FlexboxLayoutManager"
+                    android:background="@drawable/border_for_document_maininfo"
+                    android:padding="8dp" />
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/button_specialization"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/hidden_list_with_arrow"
+                android:text="@string/specialization"
+                android:textColor="?colorPrimaryUltraDark"
+                android:textStyle="bold"
+                app:backgroundTint="@null"
+                app:layout_constraintTop_toBottomOf="@id/knowledge_view" />
+
+            <LinearLayout
+                android:id="@+id/specialization_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:gravity="center|start"
+                android:orientation="vertical"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/button_specialization">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+                    <!--                    <Spinner-->
+                    <!--                        android:id="@+id/specialization_info"-->
+                    <!--                        android:layout_width="0dp"-->
+                    <!--                        android:layout_weight="1.5"-->
+                    <!--                        android:layout_height="match_parent"-->
+                    <!--                        android:padding="6dp"-->
+                    <!--                        app:layout_constraintEnd_toEndOf="parent"-->
+                    <!--                        app:layout_constraintStart_toStartOf="parent"-->
+                    <!--                        android:popupBackground="?colorPrimaryLight"-->
+                    <!--                        android:background="@drawable/selector_dropdown"-->
+                    <!--                        app:layout_constraintTop_toBottomOf="@id/et_container3"-->
+                    <!--                        android:spinnerMode="dialog"/>-->
+                    <Button
+                        android:id="@+id/specialization_info_button"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.5"
+                        android:background="@drawable/add_btn_background"
+                        android:drawableEnd="@drawable/baseline_format_list_numbered_30"
+                        android:padding="6dp"
+                        android:text="@string/add_spec_to_doc"
+                        android:textColor="?colorPrimaryUltraDark"
+                        app:backgroundTint="@null" />
+
+                    <ImageButton
+                        android:id="@+id/add_specialization_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="5dp"
+                        android:background="@drawable/add_btn_background"
+                        android:contentDescription="@string/add_specialization"
+                        android:padding="4dp"
+                        android:src="@drawable/add_circle_svg" />
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/chosen_specialization_recycle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/border_for_document_maininfo"
+                    android:maxHeight="200dp"
+                    android:minHeight="100dp"
+                    android:orientation="vertical"
+                    android:visibility="gone"
+                    android:padding="8dp"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    tools:itemCount="7" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/button_experience"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/hidden_list_with_arrow"
+                android:text="@string/experience"
+                android:textColor="?colorPrimaryUltraDark"
+                android:textStyle="bold"
+                app:backgroundTint="@null"
+                app:layout_constraintTop_toBottomOf="@id/specialization_view" />
+
+            <LinearLayout
+                android:id="@+id/experience_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="vertical"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/button_experience">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/experience_info_button"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.5"
+                        android:background="@drawable/add_btn_background"
+                        android:drawableEnd="@drawable/baseline_format_list_numbered_30"
+                        android:padding="6dp"
+                        android:text="@string/add_exp_to_doc"
+                        android:textColor="?colorPrimaryUltraDark"
+                        app:backgroundTint="@null" />
+
+                    <ImageButton
+                        android:id="@+id/add_experience_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="5dp"
+                        android:background="@drawable/add_btn_background"
+                        android:contentDescription="@string/add_specialization"
+                        android:padding="4dp"
+                        android:src="@drawable/add_circle_svg" />
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/chosen_experience_recycle"
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/border_for_document_maininfo"
+                    android:maxHeight="200dp"
+                    android:minHeight="100dp"
+                    android:orientation="horizontal"
+                    android:padding="8dp"
+                    app:layoutManager="com.google.android.flexbox.FlexboxLayoutManager"
+                    tools:itemCount="7" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/contactView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/experience_view">
+
+                <TextView
+                    android:id="@+id/contactText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="5dp"
+                    android:text="@string/document_contact_info_label"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/experience" />
+
+                <EditText
+                    android:id="@+id/contactInfo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@drawable/et_custom"
+                    android:focusable="true"
+                    android:hint="@string/document_contact_info_hint"
+                    android:inputType="textMultiLine"
+                    android:maxWidth="360dp"
+                    android:maxLines="4"
+                    android:minWidth="310dp"
+                    android:paddingLeft="@dimen/space5"
+                    android:imeOptions="actionDone"
+                    android:paddingTop="@dimen/space8"
+                    android:paddingRight="@dimen/space5"
+                    android:paddingBottom="@dimen/space8"
+                    android:textSize="16sp"
+
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/extraText" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/extra_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="30dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/contactView">
+
+                <TextView
+                    android:id="@+id/extraText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="5dp"
+                    android:text="@string/document_extra_info_hint"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/experience" />
+
+                <EditText
+                    android:id="@+id/extraInfo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@drawable/et_custom"
+                    android:focusable="true"
+                    android:hint="@string/add_extra_info"
+                    android:inputType="textMultiLine"
+                    android:gravity="top"
+                    android:maxWidth="360dp"
+                    android:maxLines="6"
+                    android:minLines="3"
+                    android:minWidth="310dp"
+                    android:paddingLeft="@dimen/space5"
+                    android:imeOptions="actionDone"
+                    android:paddingTop="@dimen/space8"
+                    android:paddingRight="@dimen/space5"
+                    android:paddingBottom="@dimen/space8"
+                    android:textSize="16sp"
+
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/extraText" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:paddingBottom="@dimen/space60"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/extra_view"
+                android:gravity="center">
+                <Button
+                    android:id="@+id/save_btn"
+                    android:paddingEnd="38dp"
+                    android:paddingStart="38dp"
+                    android:layout_marginEnd="@dimen/space5"
+                    style="@style/main_button_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/save"/>
+                <Button
+                    android:id="@+id/cancel_btn"
+                    android:paddingEnd="38dp"
+                    android:paddingStart="38dp"
+
+                    style="@style/main_button_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/cancel"/>
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</RelativeLayout>

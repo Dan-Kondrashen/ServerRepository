@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/space5"
+        android:background="@drawable/border_for_extra_top_parametrs">
+        <LinearLayout
+            android:id="@+id/extra_pref_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:orientation="vertical">
+
+            <LinearLayout
+
+                android:id="@+id/analysisPref"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="top"
+                android:layout_marginTop="@dimen/space10"
+                android:layout_marginStart="@dimen/space10"
+                android:layout_marginEnd="@dimen/space10"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_slab_variable_font_wght"
+                    android:paddingBottom="@dimen/space5"
+                    android:paddingStart="@dimen/space5"
+                    android:paddingEnd="@dimen/space5"
+                    android:text="@string/analitic_start_info_text"
+                    android:textSize="@dimen/h3"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_slab_variable_font_wght"
+                    android:padding="@dimen/space5"
+                    android:text="@string/analiticExtraWarnInfo"
+
+                    android:textStyle="italic" />
+                <LinearLayout
+                    android:id="@+id/skillGroupSelector"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:textStyle="bold"
+                        android:padding="@dimen/space5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/chose_skill_type"/>
+                    <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+                        android:id="@+id/skillClass"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/space5"
+                        android:padding="@dimen/space5"
+                        android:layout_marginBottom="@dimen/space5"
+                        android:background="@drawable/selector_dropdown" />
+                </LinearLayout>
+
+                <CheckBox
+                    android:id="@+id/choseSkillForAnalysisQuestion"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:theme="@style/custom_checkbox"
+                    android:textColor="?colorPrimaryUltraDark"
+                    android:layout_marginBottom="@dimen/space5"
+                    android:padding="@dimen/space5"
+                    android:text="@string/chose_skill_know" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="top">
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+                        <TextView
+                            android:padding="@dimen/space5"
+                            android:textStyle="bold"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/chose_know_type"/>
+                        <Spinner
+                            android:id="@+id/skillTypeSelector"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/selector_dropdown"
+                            android:paddingStart="@dimen/space5"
+                            android:paddingTop="@dimen/space5"
+                            android:paddingEnd="27dp"
+                            android:paddingBottom="@dimen/space5" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/choseSkillView"
+                        android:visibility="gone"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:layout_marginStart="@dimen/space10">
+                        <TextView
+                            android:padding="@dimen/space5"
+                            android:textStyle="bold"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/chose_know"/>
+                        <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+                            android:id="@+id/skillChose"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+
+                            android:background="@drawable/selector_dropdown"
+                            android:paddingStart="@dimen/space5"
+                            android:paddingTop="@dimen/space5"
+                            android:paddingEnd="27dp"
+                            android:paddingBottom="@dimen/space5" />
+                    </LinearLayout>
+
+
+                </LinearLayout>
+                <CheckBox
+                    android:id="@+id/choseDateInterval"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:theme="@style/custom_checkbox"
+                    android:layout_marginBottom="@dimen/space5"
+                    android:textColor="?colorPrimaryUltraDark"
+                    android:padding="@dimen/space5"
+                    android:text="@string/chose_data_interval" />
+                <LinearLayout
+                    android:id="@+id/intervalInfoView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:visibility="gone"
+                    android:orientation="vertical">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/space5"
+                            android:layout_weight="1"
+                            android:text="@string/choseAnaliticType" />
+
+                        <Spinner
+                            android:id="@+id/dateIntervalType"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+
+                            android:layout_marginStart="@dimen/space5"
+                            android:layout_weight="1"
+                            android:background="@drawable/selector_dropdown"
+                            android:paddingStart="7dp"
+                            android:paddingTop="7dp"
+                            android:paddingEnd="27dp"
+                            android:paddingBottom="7dp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/dateStartText"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/space5"
+                            android:textStyle="bold"
+                            android:layout_weight="1"
+                            android:padding="7dp"
+                            android:text="@string/start_date"
+                            android:textAlignment="center" />
+
+                        <TextView
+                            android:id="@+id/dateEndText"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/space5"
+                            android:textStyle="bold"
+                            android:layout_weight="1"
+                            android:padding="7dp"
+                            android:text="@string/end_date"
+                            android:textAlignment="center" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_marginTop="@dimen/space5">
+
+                        <Button
+                            android:id="@+id/dateStart"
+                            style="@style/main_button_style"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginEnd="@dimen/space5"
+                            android:layout_weight="1"
+                            android:drawableEnd="@drawable/calendar_svg"
+                            android:padding="7dp"
+                            android:text="@string/date_not_chosen" />
+
+                        <Button
+                            android:id="@+id/dateEnd"
+                            style="@style/main_button_style"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="@dimen/space5"
+                            android:layout_weight="1"
+                            android:drawableEnd="@drawable/calendar_svg"
+                            android:padding="7dp"
+                            android:text="@string/date_not_chosen" />
+                    </LinearLayout>
+                </LinearLayout>
+                <Button
+                    android:id="@+id/getAnaliticBtn"
+                    style="@style/main_button_style"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/space5"
+                    android:text="@string/ask_for_analitic" />
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/callAnaliticPreference"
+                style="@style/open_list_button_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space10"
+                android:layout_marginStart="@dimen/space10"
+                android:layout_marginEnd="@dimen/space10"
+                android:layout_marginBottom="@dimen/space10"
+                android:text="@string/hide_parameters" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/space45"
+                android:visibility="gone"/>
+
+        </LinearLayout>
+    </ScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
