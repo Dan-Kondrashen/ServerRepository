@@ -38,7 +38,7 @@
 
 <p align="center"> 
      <img src=https://github.com/Dan-Kondrashen/ServerRepository/assets/71755503/f7b7de49-ad89-4d16-ba28-1ad80ce39d3d width="265" />
-     <img src=https://github.com/Dan-Kondrashen/ServerRepository/assets/71755503/0a15923c-baf4-4706-8bc3-77a0cf77cc16 width="268"/>
+     <img src=https://github.com/Dan-Kondrashen/ServerRepository/assets/71755503/0a15923c-baf4-4706-8bc3-77a0cf77cc16 width="300"/>
 </p>
 
 6. Модуль организации чата по откликам, между пользователями приложения.
