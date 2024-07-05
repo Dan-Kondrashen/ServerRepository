@@ -43,6 +43,17 @@
 </p>
 
 6. Модуль организации чата по откликам, между пользователями приложения.
+
+<p align="center"> 
+     <img src=https://github.com/Dan-Kondrashen/ServerRepository/assets/71755503/ca684b1c-4d1d-4326-b4c5-9480540b6def width="227" />
+     <img src=https://github.com/Dan-Kondrashen/ServerRepository/assets/71755503/7c724c4b-c96b-40e4-b350-b6ad9299e4cd width="245"/>
+</p>
+<p align="center"> 
+    <img src=https://github.com/Dan-Kondrashen/ServerRepository/assets/71755503/68ebfd8e-428e-4a5a-b907-ddcd74f0ae18 width="300" />
+    <img src=https://github.com/Dan-Kondrashen/ServerRepository/assets/71755503/1009d714-d257-4b1b-a680-31bf63325091 width="205" />
+</p>
+
+
 7. Модуль фильтрации, используемый для получения списка документов по указанным фильтрам.
 8. Модуль настроек, в котором пользователь может сменить язык приложения или выбрать другую тему.
    
