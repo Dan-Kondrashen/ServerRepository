@@ -32,5 +32,7 @@
  <p align="center">
    <img src=https://github.com/Dan-Kondrashen/ServerRepository/assets/71755503/b7693027-7283-4cf6-9748-96329eff6e31/>  
    <img src=https://github.com/Dan-Kondrashen/ServerRepository/assets/71755503/b03d1061-18e4-472a-8d67-b4db13dd1d2c/>
+   <img src=https://github.com/Dan-Kondrashen/ServerRepository/assets/71755503/d034b346-1934-4cee-84e1-039ac54e1096/>
+
  </p>
 
