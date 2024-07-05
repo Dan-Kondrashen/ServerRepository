@@ -30,9 +30,9 @@
 8. Модуль настроек, в котором пользователь может сменить язык приложения или выбрать другую тему.
    
  <p align="center">
-   <img src=https://github.com/Dan-Kondrashen/ServerRepository/assets/71755503/b7693027-7283-4cf6-9748-96329eff6e31 width="295"/>  
+   <img src=https://github.com/Dan-Kondrashen/ServerRepository/assets/71755503/b7693027-7283-4cf6-9748-96329eff6e31 width="290"/>  
    <img src=https://github.com/Dan-Kondrashen/ServerRepository/assets/71755503/b03d1061-18e4-472a-8d67-b4db13dd1d2c width="295"/>
-   <img src=https://github.com/Dan-Kondrashen/ServerRepository/assets/71755503/d034b346-1934-4cee-84e1-039ac54e1096 width="295"/>
+   <img src=https://github.com/Dan-Kondrashen/ServerRepository/assets/71755503/d034b346-1934-4cee-84e1-039ac54e1096 width="280"/>
 
  </p>
 
