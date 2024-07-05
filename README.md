@@ -21,9 +21,8 @@
    - добавлять документы в кастомные архивы, созхданные пользователем.
    
    <p align="center"> 
-     <img src=https://github.com/Dan-Kondrashen/ServerRepository/assets/71755503/45fb4870-9948-4f60-83a1-b27309ce6bc0</image>
-     <img src=https://github.com/Dan-Kondrashen/ServerRepository/assets/71755503/9bc5e7d7-a0e5-4a8a-830b-8e59ab2bfde2</image>
-
+     <img src=https://github.com/Dan-Kondrashen/ServerRepository/assets/71755503/45fb4870-9948-4f60-83a1-b27309ce6bc0 width="265" />
+     <img src=https://github.com/Dan-Kondrashen/ServerRepository/assets/71755503/9bc5e7d7-a0e5-4a8a-830b-8e59ab2bfde2 width="267"</image>
    </p>
 
 3. Модуль добавления данных, представленный в виде многочисленных диалоговых окон и фрагмента добавления документов пользователя (вакансий или резюме)
