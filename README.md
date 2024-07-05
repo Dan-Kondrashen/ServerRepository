@@ -11,7 +11,7 @@
 В приложении реализованы такие основные модули как:
 1. Модуль аутентификации содержащий страницы регистрации и авторизации.
   <p align="center"> <img src=https://github.com/Dan-Kondrashen/ServerRepository/assets/71755503/271aafe0-a89e-4350-89cc-898ff31a6ccf width="400" />
-                     <img src=https://github.com/Dan-Kondrashen/ServerRepository/assets/71755503/e6d6f5fd-109b-4428-a1a1-34a00a472779 width="300" />
+                     <img src=https://github.com/Dan-Kondrashen/ServerRepository/assets/71755503/e6d6f5fd-109b-4428-a1a1-34a00a472779 width="290" />
   </p>
 
 2. Модуль главной страницы, в котором пользователи могут:
