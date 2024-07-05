@@ -18,11 +18,13 @@
    - просматривать документы, подбираемые по заранее определенным фильтрам;
    - просматривать более подробную информацию по документу и организовывать работу с ним;
    - оставлять отклики на документы, добавлять их в избранное или скрывать их от пользователя;
-   - добавлять документы в кастомные архивы, созхданные пользователем.
+   - добавлять документы в кастомные архивы, созданные пользователем.
    
    <p align="center"> 
      <img src=https://github.com/Dan-Kondrashen/ServerRepository/assets/71755503/45fb4870-9948-4f60-83a1-b27309ce6bc0 width="265" />
-     <img src=https://github.com/Dan-Kondrashen/ServerRepository/assets/71755503/9bc5e7d7-a0e5-4a8a-830b-8e59ab2bfde2 width="267"</image>
+     <img src=https://github.com/Dan-Kondrashen/ServerRepository/assets/71755503/9bc5e7d7-a0e5-4a8a-830b-8e59ab2bfde2 width="267"/>
+     <img src=https://github.com/Dan-Kondrashen/ServerRepository/assets/71755503/eaa08f70-5d71-4c03-bdea-5b178c9a1269 width="267"/>
+ width="267"/>
    </p>
 
 3. Модуль добавления данных, представленный в виде многочисленных диалоговых окон и фрагмента добавления документов пользователя (вакансий или резюме)
