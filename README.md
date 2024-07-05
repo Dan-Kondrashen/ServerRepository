@@ -10,7 +10,9 @@
 
 В приложении реализованы такие основные модули как:
 1. Модуль аутентификации содержащий страницы регистрации и авторизации.
-   ![image](https://github.com/Dan-Kondrashen/ServerRepository/assets/71755503/271aafe0-a89e-4350-89cc-898ff31a6ccf) ![image](https://github.com/Dan-Kondrashen/ServerRepository/assets/71755503/e6d6f5fd-109b-4428-a1a1-34a00a472779)
+  <p align="center"> <img src=https://github.com/Dan-Kondrashen/ServerRepository/assets/71755503/271aafe0-a89e-4350-89cc-898ff31a6ccf/>
+                     <img src=https://github.com/Dan-Kondrashen/ServerRepository/assets/71755503/e6d6f5fd-109b-4428-a1a1-34a00a472779/>
+  </p>
 
 2. Модуль главной страницы, в котором пользователи могут:
    - просматривать документы, подбираемые по заранее определенным фильтрам;
