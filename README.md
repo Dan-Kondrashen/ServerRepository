@@ -55,12 +55,18 @@
 
 
 7. Модуль фильтрации, используемый для получения списка документов по указанным фильтрам.
+
+<p align="center">
+   <img src=https://github.com/Dan-Kondrashen/ServerRepository/assets/71755503/9d3abf28-2fea-4847-93e8-28e882934a17 width="270"/>  
+   <img src=https://github.com/Dan-Kondrashen/ServerRepository/assets/71755503/8167c1b8-30bd-49a8-ac51-d7b873ffa616 width="270"/>
+   <img src=https://github.com/Dan-Kondrashen/ServerRepository/assets/71755503/845b19f7-f7d9-42ca-b73d-b1e61c0bb440 width="255"/>
+ </p>
+
 8. Модуль настроек, в котором пользователь может сменить язык приложения или выбрать другую тему.
    
  <p align="center">
    <img src=https://github.com/Dan-Kondrashen/ServerRepository/assets/71755503/b7693027-7283-4cf6-9748-96329eff6e31 width="270"/>  
    <img src=https://github.com/Dan-Kondrashen/ServerRepository/assets/71755503/b03d1061-18e4-472a-8d67-b4db13dd1d2c width="273"/>
    <img src=https://github.com/Dan-Kondrashen/ServerRepository/assets/71755503/d034b346-1934-4cee-84e1-039ac54e1096 width="260"/>
-
  </p>
 
