@@ -11,7 +11,7 @@
 В приложении реализованы такие основные модули как:
 1. Модуль аутентификации содержащий страницы регистрации и авторизации.
   <p align="center"> <img src=https://github.com/Dan-Kondrashen/ServerRepository/assets/71755503/271aafe0-a89e-4350-89cc-898ff31a6ccf width="400" />
-                     <img src=https://github.com/Dan-Kondrashen/ServerRepository/assets/71755503/e6d6f5fd-109b-4428-a1a1-34a00a472779 width="290" />
+                     <img src=https://github.com/Dan-Kondrashen/ServerRepository/assets/71755503/e6d6f5fd-109b-4428-a1a1-34a00a472779 width="295" />
   </p>
 
 2. Модуль главной страницы, в котором пользователи могут:
@@ -29,5 +29,5 @@
 7. Модуль фильтрации, используемый для получения списка документов по указанным фильтрам.
 8. Модуль настроек, в котором пользователь может сменить язык приложения или выбрать другую тему.
    
- ![image](https://github.com/Dan-Kondrashen/ServerRepository/assets/71755503/b7693027-7283-4cf6-9748-96329eff6e31) ![image](https://github.com/Dan-Kondrashen/ServerRepository/assets/71755503/b03d1061-18e4-472a-8d67-b4db13dd1d2c) 
+ <p align="center">![image](https://github.com/Dan-Kondrashen/ServerRepository/assets/71755503/b7693027-7283-4cf6-9748-96329eff6e31) ![image](https://github.com/Dan-Kondrashen/ServerRepository/assets/71755503/b03d1061-18e4-472a-8d67-b4db13dd1d2c) </p>
 
