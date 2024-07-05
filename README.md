@@ -37,8 +37,10 @@
 5. Модуль сбора статистических данны и построения статистических графиков по компетенциям, используемым в приложении(специальностям и навыкам пользователей), и по документам пользователей.
 
 <p align="center"> 
-     <img src=https://github.com/Dan-Kondrashen/ServerRepository/assets/71755503/f7b7de49-ad89-4d16-ba28-1ad80ce39d3d width="265" />
-     <img src=https://github.com/Dan-Kondrashen/ServerRepository/assets/71755503/0a15923c-baf4-4706-8bc3-77a0cf77cc16 width="300"/>
+     <img src=https://github.com/Dan-Kondrashen/ServerRepository/assets/71755503/f7b7de49-ad89-4d16-ba28-1ad80ce39d3d width="215" />
+     <img src=https://github.com/Dan-Kondrashen/ServerRepository/assets/71755503/0a15923c-baf4-4706-8bc3-77a0cf77cc16 width="245"/>
+     <img src=https://github.com/Dan-Kondrashen/ServerRepository/assets/71755503/1bda895e-24c6-4c76-954d-30164bf7cb14 width="245"/>
+
 </p>
 
 6. Модуль организации чата по откликам, между пользователями приложения.
