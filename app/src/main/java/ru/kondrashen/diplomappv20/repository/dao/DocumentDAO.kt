@@ -64,7 +64,7 @@ interface DocumentDAO: BaseDAO<Document> {
             "(CASE WHEN user_table.mname IS NULL THEN user_table.fname " +
             "ELSE user_table.fname || ' ' || user_table.mname  END) as userFIO, " +
             "user_table.lname as extraName , " +
-            "date , userId FROM document_table JOIN user_table ON user_table.id = userId JOIN document_views_table WHERE document_table.userId = :userId ORDER BY date DESC")
+            "date , userId FROM document_table JOIN user_table ON user_table.id = userId LEFT JOIN document_views_table WHERE document_table.userId = :userId ORDER BY date DESC")
     fun getUserDocumentsByUserId(userId: Int): LiveData<List<DocumentInfoWithKnowledge>>
 
     @Query("SELECT * FROM document_table JOIN user_table ON user_table.id = document_table.userId " +

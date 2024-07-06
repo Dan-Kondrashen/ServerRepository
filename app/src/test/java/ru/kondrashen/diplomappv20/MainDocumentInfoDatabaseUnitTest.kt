@@ -56,6 +56,12 @@ class MainDocumentInfoDatabaseUnitTest {
     private lateinit var knowDAO: KnowledgeDAO
     private lateinit var viewDAO: ViewsDAO
     private var testId = 0
+    private val user = User(id = 100, lname = "Иванов", fname = "Иван", mname = null,
+        email = "ivanov@email.com", phone = 88008008080,
+        status = "success", roleId = 1,  registration_date = "2024-05-10")
+    private val user2 = User(id = 101, lname = "ООО 'Рассвет'", fname = "Иванов Иван Иванович", mname = null,
+        email = "ivanov@email.com", phone = 88008008080,
+        status = "success", roleId = 1,  registration_date = "2024-05-10")
 
     @Before
     fun createDb() {
@@ -78,9 +84,6 @@ class MainDocumentInfoDatabaseUnitTest {
     @Test
     fun getDocumentsLocal_isSuccess() {
         runTest{
-            val user = User(id = 100, lname = "Иванов", fname = "Иван", mname = null,
-                email = "ivanov@email.com", phone = 88008008080,
-                status = "success", roleId = 1,  registration_date = "2024-05-10")
             userDao.addItem(user)
             var docList = mutableListOf<Document>()
             while (testId < 10) {
@@ -119,9 +122,6 @@ class MainDocumentInfoDatabaseUnitTest {
     @Test
     fun getMostViewedDocumentsLocal_isSuccess() {
         runTest{
-            val user = User(id = 100, lname = "Иванов", fname = "Иван", mname = null,
-                email = "ivanov@email.com", phone = 88008008080,
-                status = "success", roleId = 1,  registration_date = "2024-05-10")
             userDao.addItem(user)
             while (testId < 10) {
                 testId +=1
@@ -167,9 +167,6 @@ class MainDocumentInfoDatabaseUnitTest {
         runTest{
             val knowledge = Knowledge(knowId = 1, name = "SQL", description = null)
             knowDAO.addItem(knowledge)
-            val user = User(id = 100, lname = "Иванов", fname = "Иван", mname = null,
-                email = "ivanov@email.com", phone = 88008008080,
-                status = "success", roleId = 1,  registration_date = "2024-05-10")
             userDao.addItem(user)
             while (testId < 10) {
                 testId +=1
@@ -204,7 +201,7 @@ class MainDocumentInfoDatabaseUnitTest {
         }
         val docAdded = documentDAO.getUserKnowledgeDocsWithKnowMainInfo("vacancy", listOf(1))
         docAdded.test()
-            .awaitValue(15, TimeUnit.SECONDS)
+            .awaitValue(10, TimeUnit.SECONDS)
             .assertValue { it.size == 5}
     }
 
@@ -244,6 +241,38 @@ class MainDocumentInfoDatabaseUnitTest {
             }
         }
         val docAdded = documentDAO.getUserRespDocsWithMoreInfo("view")
+        docAdded.test()
+            .awaitValue(5, TimeUnit.SECONDS)
+            .assertValue { it.size == 3}
+    }
+
+    @Test
+    fun getUserDocumentsLocal_isSuccess() {
+        runTest{
+            userDao.addItem(user)
+            userDao.addItem(user2)
+
+
+            while (testId < 3) {
+                testId +=1
+                val document = Document(
+                    docId = testId, title = "ключ теста 1",
+                    salaryF = null, salaryS = null,
+                    extra_info = "", contactinfo = "",
+                    userId = 100, date = "2024-05-10", type = "vacancy"
+                )
+                val document2 = Document(
+                    docId = testId, title = "ключ теста 1",
+                    salaryF = null, salaryS = null,
+                    extra_info = "", contactinfo = "",
+                    userId = 101, date = "2024-05-10",
+                    type = "vacancy"
+                )
+                documentDAO.addItem(document)
+                documentDAO.addItem(document2)
+            }
+        }
+        val docAdded = documentDAO.getUserDocumentsByUserId(101)
         docAdded.test()
             .awaitValue(5, TimeUnit.SECONDS)
             .assertValue { it.size == 3}
